@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100348659-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
+  <style type="text/css">
+    body {
+      font-family: 'Fira Sans', sans-serif;
+      background-color: #eee;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 300;
+      margin: 20px;
+    }
+
+    h2 {
+      float: left;
+      margin: 20px;
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    h3 {
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 6px;
+      margin-bottom: 0px;
+    }
+
+    h4 {
+      font-weight: 400;
+      text-align: center;
+      margin: 20px;
+      margin-top: 0px;
+    }
+
+    p.price {
+      font-size: 20px;
+      margin: 20px;
+      margin-bottom: 0px;
+    }
+
+    article {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .row {
+      width: 100%;
+    }
+
+    .block {
+      margin: 10px;
+      display: inline-block;
+    }
+
+    div.card {
+      width: 250px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    div.item {
+      width: 100px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      border-radius: 4px;
+      background-color: white;
+      transition: all 0.5s;
+    }
+
+    div.item:hover {
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      width: 120px;
+    }
+
+    div.dobleitem:hover {
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      width: 240px;
+    }
+
+    div.dobleitem {
+      width: 220px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      border-radius: 4px;
+      background-color: white;
+      transition: all 0.5s;
+    }
+
+    input {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 20px;
+      letter-spacing: 10px;
+      text-align: center;
+      width: 160px;
+      padding: 10px 10px 10px 20px;
+      border: 3px solid #999;
+      outline: none;
+      transition: all 0.5s;
+      margin: 20px;
+      margin-bottom: 0;
+    }
+
+    input[type=text]:focus {
+      border: 3px solid #555;
+    }
+
+    button {
+      float: right;
+      background-color: #d22b3b;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      font-size: 15px;
+      border-radius: 4px;
+      transition: all 0.5s;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+      margin-top: 17px;
+      margin-right: 25px;
+    }
+
+    button:hover {
+      background-color: #e24655;
+      box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.24), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    button:active {
+      background-color: #bf3d4a;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.1s;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      padding: 5px;
+      background-color: #d22b3b;
+      display: inline-block;
+      box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.3);
+      align-items: center;
+    }
+
+    .info {
+      color: gray;
+      text-align: right;
+      margin-left: 35px;
+      float: left;
+    }
+  </style>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500" rel="stylesheet">
+  <title>Connect to Wi-Fi</title>
+  <meta name="theme-color" content="#d22b3b">
+  <meta name="description" content="It pops up when a device connects to a certain open network">
+</head>
+
+<body>
+  <h1>ENTER YOUR CODE TO ACCES THE WI-FI NETWORK</h1>
+  <div class="row">
+    <div class="card block">
+      <div>
+        <input maxlength="7" type="text" placeholder="CODE" style="text-transform:uppercase">
+        <p class="info">Keep your<br>tiket</p>
+        <button type="button">CONNECT</button>
+      </div>
+
+    </div>
+  </div>
+  <h3>PRICING</h3>
+  <p style="text-align:center; color:#333">Ask for your ticket to the waiter or in the hotel reception</p>
+  <div class="row">
+    <div class="item block">
+      <p class="price">Free</p>
+      <h4>15 min</h4>
+    </div>
+    <div class="item block">
+      <p class="price">2€</p>
+      <h4>60 min</h4>
+    </div>
+    <div class="item block">
+      <p class="price">5€</p>
+      <h4>1 day</h4>
+    </div>
+    <div class="item block">
+      <p class="price">14.90€</p>
+      <h4>7 days</h4>
+    </div>
+    <div class="item block">
+      <p class="price">24.90€</p>
+      <h4>15 days</h4>
+    </div>
+    <div class="item block">
+      <p class="price">29.90€</p>
+      <h4>30 days</h4>
+    </div>
+    <div class="dobleitem block">
+      <p class="price">Free</p>
+      <h4>Hotel guest's</h4>
+    </div>
+  </div>
+  <div style="height: 100px;"></div>
+</body>
+<footer class="footer row">
+  <a href="http://www.inforcelra.com"><img src="http://www.inforcelra.com/img/logo-inforcelra.jpg" style="height:55px"></a>
+</footer>
+
+</html>

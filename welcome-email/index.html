@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Bienvenido a Hotel SPA Classic Begur</title>
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Fira+Sans:300,400" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style media="all">
+		.item {
+			max-width: 20em;
+			box-sizing: border-box;
+			margin: 0 0.5em;
+			display: inline-block;
+			text-align: justify;
+			vertical-align: top;
+		}
+		.footer-logos {
+			text-align: center;
+			border-top: solid thin #B99C53;
+			margin: 0.5em 0.5em 0;
+		}
+		.footer-logos img {
+			margin: 0.5em;
+			max-width: 25%;
+		}
+		.footer-text {
+			color: #B99C53;
+			margin: 2em auto 0;
+		}
+		.info-image {
+			width: 100%;
+			box-sizing: border-box;
+			border: solid 0.2em #B99C53;
+			border-radius: 0.5em;
+			margin: auto;
+		}
+		.more-info {
+			text-decoration: none;
+			color: #B99C53;
+			float: right;
+			margin: 0.5em 0;
+			font-weight: 400;
+		}
+		a {
+			text-decoration: none;
+			color: #B99C53;
+			font-weight: 400;
+		}
+		.introduction {
+			max-width: 45em;
+			margin: auto;
+			margin-bottom: 1em;
+		}
+		.logo {
+			margin-bottom: 1em;
+			max-width: 16em;
+		}
+		ul {
+			list-style-type: none;
+			padding-left: 0;
+		}
+		p {
+			font-size: 1em;
+			margin: 0 0 0.5em;
+		}
+		h1 {
+			color: #B99C53;
+			font-size: 2em;
+			margin: 0 0 0.5em;
+			font-weight: 100;
+		}
+		h2 {
+			color: #B99C53;
+			font: 2em 'Dancing Script', cursive;
+			border-bottom: solid thin #B99C53;
+			margin: 1em 0;
+		}
+		h3 {
+			font-weight: 400;
+			margin: 1em 0 0.4em 0;
+			text-align: left;
+		}
+		h4 {
+			display: inline-block;
+			text-decoration: none;
+			margin: 0.5em 0;
+			font-weight: 400;
+		}
+		h5 {
+			display: inline-block;
+			font-weight: 400;
+			margin: 0.2em 0;
+			text-align: left;
+		}
+		body {
+			font-family: 'Fira Sans', 'Roboto', 'San Francisco', 'Open Sans', 'Lucida Grande', Helvetica, sans-serif;
+			margin: auto;
+			text-align: center;
+			font-weight: 300;
+			max-width: 43em;
+			padding: 0.5em;
+		}
+	</style>
+</head>
+
+<body>
+	<p style="display: none;">Estimado/a [TITULARNOMBRE], aquí tiene el resumen de su reserva y más información. </p>
+	<div>
+		<h1>Bienvenido a</h1>
+		<a href="http://www.hotelclassicbegur.com/es" target="_blank">
+			<img src="logo-color.svg" alt="Hotel SPA Classic Begur"
+			 class="logo">
+		</a>
+		<p class="introduction">Estimado/a [TITULARNOMBRE], gracias por reservar a través de nuestra web. Desde el Hotel SPA Classic Begur queremos que
+			disfrute al máximo de su estancia. Por eso le enviamos este email con toda la información que creemos que puede necesitar,
+			recomendamos que lo lea hasta el final.</p>
+	</div>
+
+	<div class="item">
+		<h2>Mi reserva</h2>
+		<p style="line-height: 1.8; text-align: left;">
+			Nombre: [TITULARNOMBRE] <br>
+			Apellidos: [TITULARAPELLIDO1] [TITULARAPELLIDO2] <br>
+			E-mail: [TITULAREMAIL] <br>
+			Teléfono: [TITULARTELEFONO] <br>
+			Nº Reserva: [LOCALIZADOR] <br>
+			Observaciones: [OBSERVACIONES] <br>
+			Precio Total: [TOTALRESERVA] <br>
+		</p>
+		<a href="http://www.hotelclassicbegur.com/reserves.php?channelkey=B08D3A7-7B-450A-B671-18DC4B2311&idiomaid=es&fullintegration=1&vscroll=1&email=[TITULAREMAIL]&amp;localizador=[LOCALIZADOR]&amp;boton2="
+		 target="_blank" class="more-info">Ver estado online</a>
+	</div>
+
+
+	<div class="item">
+		<h2>El hotel</h2>
+		<p style="line-height: 1.8; text-align: left;">
+			Nombre: Hotel-SPA Classic Begur <br>
+			Dirección: <a href="https://www.google.es/maps/place/Hotel+Spa+Classic+Begur/@41.9548246,3.207127,19.45z/data=!4m5!3m4!1s0x12ba5162aea540cf:0x183a684396b23273!8m2!3d41.9547899!4d3.2076483"
+			 target="_blank">Pi i Ralló, 5 - Begur - Girona</a> <br>
+			Teléfono: <a href="tel:+34656906995">+34 656 90 69 95</a> <br>
+			E-mail: <a href="mailto:reservas@hotelclassicbegur.com">reservas@hotelclassicbegur.com</a> <br>
+			Web: <a href="http://www.hotelclassicbegur.com/" target="_blank">www.hotelclassicbegur.com</a> <br>
+		</p>
+	</div>
+
+	<producto>
+
+		<div itemscope itemtype="http://schema.org/LodgingReservation" style="display: none;">
+			<meta itemprop="reservationNumber" content="[LOCALIZADOR]"/>
+			<link itemprop="reservationStatus" href="http://schema.org/Confirmed"/>
+			<div itemprop="underName" itemscope itemtype="http://schema.org/Person">
+				<meta itemprop="name" content="[TITULARNOMBRE] [TITULARAPELLIDO1] [TITULARAPELLIDO2]"/>
+				<meta itemprop="email" content="[TITULAREMAIL]"/>
+			</div>
+			<div itemprop="reservationFor" itemscope itemtype="http://schema.org/LodgingBusiness">
+				<meta itemprop="name" content="Hotel SPA Classic Begur"/>
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<meta itemprop="streetAddress" content="Pi i Ralló, 5"/>
+					<meta itemprop="addressLocality" content="Begur"/>
+					<meta itemprop="addressRegion" content="Girona"/>
+					<meta itemprop="postalCode" content="17255"/>
+					<meta itemprop="addressCountry" content="ES"/>
+				</div>
+				<meta itemprop="url" content="https://www.hotelclassicbegur.com/"/>
+				<meta itemprop="image" content="https://www.hotelclassicbegur.com/media/hotel/spa-classic.jpg"/>
+				<meta itemprop="telephone" content="+34656906995"/>
+			</div>
+			<meta itemprop="numAdults" content="[PRODUCTOADULTO]"/>
+			<meta itemprop="numChildren" content="[PRODUCTONENES]"/>
+			<meta itemprop="price" content="[TOTALRESERVA]"/>
+			<meta itemprop="priceCurrency" content="EUR"/>
+			<meta itemprop="checkinDate" content="[PRODUCTOLLEGADA]T14:00"/>
+			<meta itemprop="checkoutDate" content="[PRODUCTOSALIDA]T11:00"/>
+			<link itemprop="cancelReservationUrl" href="http://www.hotelclassicbegur.com/reserves.php?channelkey=B08D3A7-7B-450A-B671-18DC4B2311&idiomaid=es&fullintegration=1&vscroll=1&email=[TITULAREMAIL]&localizador=[LOCALIZADOR]&boton2="/>
+			<link itemprop="modifyReservationUrl" href="http://www.hotelclassicbegur.com/reserves.php?channelkey=B08D3A7-7B-450A-B671-18DC4B2311&idiomaid=es&fullintegration=1&vscroll=1&email=[TITULAREMAIL]&localizador=[LOCALIZADOR]&boton2="/>
+		</div>
+
+		<div class="item">
+			<h2>Habitaciones reservadas</h2>
+			<div>
+				<h3>[PRODUCTONOMBRE]</h3>
+				<table>
+					<tbody>
+						<tr><td><h5>Régimen:&nbsp;</h5></td><td><p>[PRODUCTOREGIMEN]</p></td></tr>
+						<tr><td><h5>Llegada:&nbsp;</h5></td><td><p><b>[PRODUCTOLLEGADA]</b></p></td></tr>
+						<tr><td><h5>Salida:&nbsp;</h5></td><td><p>[PRODUCTOSALIDA]</p></td></tr>
+						<tr><td><h5>Adultos:&nbsp;</h5></td><td><p>[PRODUCTOADULTO]</p></td></tr>
+						<tr><td><h5>Niños:&nbsp;</h5></td><td><p>[PRODUCTONENES]</p></td></tr>
+						<tr><td><h5>Bebés:&nbsp;</h5></td><td><p>[PRODUCTOBEBES]</p></td></tr>
+						<tr><td><h5>Precio estancia:&nbsp;</h5></td><td><p>[PRODUCTOPRECIO]</p></td></tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr><td><h5>Días</h5></td><td><h5>Precio</h5></td></tr>
+						<productodetalledia>
+							<tr><td><p>[DETALLEDIA]</p></td><td><p>[DETALLEPRECIO]</p></td></tr>
+						</productodetalledia>
+					</tbody>
+				</table>
+				<productoofertasaplicadas>
+					<h3>Ofertas aplicadas</h3>
+					<productoofertaslineas>
+						<p>[PRODUCTOOFERTA]</p>
+					</productoofertaslineas>
+				</productoofertasaplicadas>
+			</div>
+
+			<PRODUCTOSERVICIOSSUELTOS>
+				<h2>Servicios Contratados</h2>
+
+				<h3>[SERVICIONOMBRE]</h3>
+				<table>
+					<tbody>
+						<tr><td><h5>Fechas:&nbsp;</h5></td><td><p>[SERVICIOFECHA]</p></td></tr>
+						<tr><td><h5>Precio:&nbsp;</h5></td><td><p>[SERVICIOPRECIO]</p></td></tr>
+						<tr><td><h5>Cantidad:&nbsp;</h5></td><td><p>[SERVICIOCANTIDAD]</p></td></tr>
+					</tbody>
+				</table>
+			</PRODUCTOSERVICIOSSUELTOS>
+		</div>
+
+
+	<div class="item">
+		<h2>Entrada y Salida</h2>
+		<p><b>Check-in</b>: a partir de las 14:00.</p>
+		<p><b>Check-out</b>: hasta las 12:00.</p>
+		<p>En el check-in le pediremos el DNI u otro documento identificativo, recomendamos tenerlo a mano.</p>
+		<p>Si cree que necesitará llegar muy tarde o irse muy temprano comuníquenoslo con antelación.</p>
+
+		<h2>Desayuno</h2>
+		<p>De 8:30 a 11:00 en el restaurante del hotel.</p>
+		<p>O si lo prefiere, le traemos el desayuno a la habitación, solo tiene que avisarnos.</p>
+		<h4>Incluido</h4>
+
+		<h2>Begur</h2>
+		<p>En Begur siempre hay cosas que hacer, dé un vistazo a la página oficial del pueblo. Encontrará toda la información que necesite y mucho más.</p>
+		<a href="http://visitbegur.cat/es/" target="_blank" class="more-info">Web de Begur</a>
+	</div>
+
+
+	<div class="item">
+		<h2>Aparcamiento</h2>
+		<p>No se puede acceder hasta la puerta del hotel en coche, ya que está situado en zona peatonal.</p>
+		<p>Alrededor de la zona peatonal, entre 100 y 200 metros del hotel, hay varios aparcamientos.</p>
+		<p>En temporada baja todos son gratuitos.</p>
+		<p>En temporada alta, de junio a septiembre, muchos pasan a ser de pago. Para descargar el equipaje comódamente puede utilizar
+			los párquines de pago, en la recepción disponemos de vales de una hora gratis.</p>
+		<a href="http://www.hotelclassicbegur.com/media/mapa/parking.png" target="_blank">
+			<img src="parking.png" alt="Mapa de los párquines de Begur" class="info-image">
+		</a>
+		<h4>Una hora gratis</h4>
+	</div>
+
+
+	<div class="item">
+		<h2>Masajes</h2>
+		<p>Le ofrecemos una variada carta de masajes y se pueden realizar tanto en la habitación como en la sala ambientada para masajes.</p>
+		<h4 style="margin-right: 2em;">30 minutos 45 EUR</h4>
+		<h4>60 minutos 75 EUR</h4>
+		<a href="https://www.hotelclassicbegur.com/hotel-spa-begur" target="_blank" class="more-info">Más información</a>
+		<div style="clear:both;"></div>
+
+
+		<h2>Restaurante</h2>
+		<p>En la planta baja del hotel está el Restaurante La Cuina..., que ofrece platos del Empordà con productos de la tierra.</p>
+		<p>Por la noche puede degustar con su pareja un elaborado menú gastronómico en un entorno romántico.</p>
+		<a href="https://www.hotelclassicbegur.com/restaurante-begur" target="_blank" class="more-info">Ver imágenes</a>
+		<div style="clear:both;"></div>
+
+		<h2>MiniBar</h2>
+		<p>En su habitación encontrará una nevera minibar, vinos y snacks, puede servirse lo que le plazca. La lista de precios está en la habitación.</p>
+		<h4>No Incluido</h4>
+	</div>
+
+
+	<div class="item">
+		<h2>SPA</h2>
+		<p>En el antiguo sotano está el SPA CLASSIC una zona de relax que dispone de una piscina a 34 ºC con chorros de agua y jacuzzi, hamman, ducha de contrastes y piedras calientes.</p>
+		<p>Puede acceder al spa con el ascensor, es obligatorio el bañador o biquini y los huéspedes disponen de albornoz en la habitación.</p>
+		<p>Por de seguridad no se puede acceder con ningún tipo de vaso, copa o botella de cristal. </p>
+		<div class="spa-type">
+			<h3>SPA Clientes</h3>
+			<p>Los huéspedes del hotel tienen entrada libre de 11:00 a 21:00.</p>
+			<h4>Incluido</h4>
+		</div>
+		<div class="spa-type">
+			<h3>SPA Privado</h3>
+			<p>De 21:00 a 24:00 los clientes del hotel pueden reservar la zona del spa para uso privado.</p>
+			<h4>De pago 35 EUR/hora</h4>
+			<a href="https://www.hotelclassicbegur.com/hotel-spa-begur" target="_blank" class="more-info">Más información</a>
+		</div>
+	</div>
+
+
+	<div class="item">
+		<h2>Playas</h2>
+		<p>Begur cuenta con ocho calas y playas, dispuestas en el norte, este y sur del pueblo, de características y belleza completamente variadas.</p>
+		<p>En Begur hay 3 tramos de camino de ronda. Actualmente, se puede pasear, disfrutar con tranquilidad del paisaje costero y acceder a las calas escondidas.</p>
+		<p>Durante el verano, hay servicio de autobuses entre Begur y las principales playas, en el hotel tenemos folletos con los horarios.</p>
+
+		<h2>Wi-Fi</h2>
+		<p>Cuando llegue al hotel le daremos un ticket por persona con una clave que necesitará para conectar cada dispositivo a la
+			red "Hotel Classic".</p>
+		<h4>Incluido</h5>
+	</div>
+
+
+	<div class="item" style="max-width: 42em;">
+			<h2>Condiciones y políticas</h2>
+			<productohotelcondicion>
+				<h3>[CONDICIONNOMBRE]</h3>
+				<p>[CONDICIONDESCRIPCION]</p>
+			</productohotelcondicion>
+		</div>
+	</producto>
+
+
+	<p class="footer-text">♥ Le deseamos una relajante estancia ♥</p>
+
+	<div class="footer-logos">
+		<a href="http://www.costabravaverdhotels.com/" target="_blank">
+			<img src="http://www.costabravaverdhotels.com/templates/images/costabravahotels_tallat.jpg" alt="Logo Costa Brava Hotels">
+		</a>
+		<a href="https://www.blauverdhotels.com/" target="_blank">
+			<img src="http://www.costabravaverdhotels.com/templates/images/blauverdhotels_tallat.jpg" alt="Logo BlauVerd Hotels">
+		</a>
+		<a href="http://www.petitsgranshotelsdecatalunya.com/" target="_blank">
+			<img src="http://www.costabravaverdhotels.com/templates/images/petitsgranshotels_tallat.jpg" alt="Logo Petits Grans Hotels de Catalunya">
+		</a>
+	</div>
+
+
+</body>
+
+</html>

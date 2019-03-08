@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Baco</title>
+  <meta name="description" content="Baco es un recopilatorio de juegos picantes para fiestas">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" media="all">
+  <link rel="stylesheet" href="ripple.min.css" media="all">
+  <link rel="stylesheet" href="animate.min.css" media="all">
+  <link rel="stylesheet" href="nouislider.min.css" media="all">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#b71c37">
+  <meta name="msapplication-TileColor" content="#b71c37">
+  <meta name="msapplication-TileImage" content="mstile-144x144.png">
+  <meta name="theme-color" content="#15586a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('sw.js')
+        .then(function () { console.log("Service Worker Registered"); });
+    }
+  </script>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="nouislider.min.js"></script>
+  <style media="all">
+    .phrase {
+      position: absolute;
+      top: calc(50% + 0.5em);
+      left: 50%;
+      font-size: 3em;
+      margin: 0em;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: calc(100% - 0.4em);
+      padding: 0.2em;
+    }
+
+    html {
+      background-color: #2392b0;
+    }
+
+    body {
+      background-color: #2392b0;
+      color: white;
+      margin: 0em;
+      font-family: 'Quicksand', 'Roboto', sans-serif;
+    }
+
+    .header {
+      background-color: #15586a;
+      padding: 0em;
+      height: 3em;
+      font-size: 1em;
+      position: fixed;
+      top: 0em;
+      width: 100vw;
+      text-align: center;
+      vertical-align: middle;
+      z-index: 3;
+      box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .mode-button {
+      margin: 0em;
+      line-height: 100%;
+      cursor: pointer;
+      background: none;
+      border-style: none;
+      padding: 0.75em;
+      display: inline-block;
+      border-width: 0em;
+      font-size: 1em;
+      border-image-width: 0em;
+    }
+
+    .mode-img {
+      height: 1.5em;
+      margin: 0em;
+    }
+
+    .players-input {
+      height: 3em;
+      width: calc(100vw - 3em);
+      padding: 0em;
+      float: left;
+      margin: 0em auto;
+      color: white;
+      font-size: 1em;
+      background: none;
+      border-style: none;
+      border-width: 0em;
+      line-height: 100%;
+      overflow: scroll;
+    }
+
+    .div-phrase {
+      height: 100vh;
+      cursor: pointer;
+      width: 100vw;
+      position: absolute;
+      top: 0em;
+    }
+
+    .div-prev {
+      height: 100vh;
+      cursor: pointer;
+      width: 33vw;
+      position: absolute;
+      top: 0em;
+      z-index: 1;
+      background-color: none;
+    }
+
+    .topic-div p {
+      margin: 0em;
+    }
+
+    .topic-div ol {
+      margin: 0em;
+      padding-left: 1.5em;
+    }
+
+    .topic-div ul {
+      margin: 0em;
+      padding-left: 1.5em;
+    }
+
+    .chose-topics-div {
+      padding-top: 3.2em;
+      text-align: center;
+    }
+
+    .topics-div {
+      margin: auto;
+      padding: 0.5em;
+      max-width: 80em;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-items: stretch;
+      align-items: stretch;
+      -webkit-justify-content: center;
+      justify-content: center;
+    }
+
+    .topic-div {
+      padding: 0.5em;
+      box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+      border-radius: 0.5em;
+      background-color: white;
+      color: #16463d;
+      cursor: pointer;
+      margin: 0.5em;
+      -webkit-flex: 1 0 0;
+      /* Safari 6.1+ */
+      -ms-flex: 1 0 0;
+      /* IE 10 */
+      flex: 1 0 0;
+      -webkit-flex-basis: 15em;
+      flex-basis: 15em;
+      transition: 0.3s;
+      position: relative;
+      top: 0;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .topic-div:hover {
+      background-color: #f4f0ea;
+      box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.4);
+      position: relative;
+      top: -0.33em;
+    }
+
+    h3 {
+      margin: 1em auto 0em auto;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    h2 {
+      margin: 0em;
+      font-size: 1.7em;
+    }
+
+    h1 {
+      margin: 0.5em 0em;
+      background: none;
+      border-style: none;
+      color: white;
+      line-height: 100%;
+      font-size: 1.5em;
+      font-weight: normal;
+    }
+
+    .slider {
+      max-width: 25em;
+      width: 80%;
+      margin: 1em auto;
+      z-index: 2;
+    }
+
+    #slider .noUi-connect {
+      background: #d96b68;
+    }
+
+    .share-button {
+      margin: 0.5em auto 1em auto;
+      background-color: rgba(0, 0, 0, 0.3);
+      font-size: 1.5em;
+      border-radius: 0.25em;
+      padding: 0.25em;
+      text-decoration: none;
+      border-style: none;
+      color: white;
+      font-family: 'Quicksand', 'Roboto', sans-serif;
+      box-shadow: 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .notbold {
+      font-weight: normal;
+    }
+
+    ​ ::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    ::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .noselect {
+      -webkit-touch-callout: none;
+      /* iOS Safari */
+      -webkit-user-select: none;
+      /* Safari */
+      -khtml-user-select: none;
+      /* Konqueror HTML */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+      user-select: none;
+      /* Non-prefixed version, currently supported by Chrome and Opera */
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    button:focus,
+    input:focus {
+      outline: none;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body class="noselect">
+  <nav class="header">
+    <button type="button" name="modo" id="mode_button" class="mode-button ripple" onclick="choseTopic()" style="float: left;"
+      hidden title="Cambiar modo de juego"><img src="house.svg" alt="Modo" class="mode-img" hidden></button>
+    <input type="text" class="players-input animated fadeInDown" id="players" placeholder="Ejemplo: Yo Pol Marta Judith Alvaro Claudia"
+      onblur="getPlayers(); playersOK();" onkeydown="if (event.keyCode == 13) document.getElementById('players').blur()" hidden
+      autofocus>
+    <h1 id="title">¿A qué quieres jugar?</h1>
+  </nav>
+  <div class="div-prev ripple" id="prev-div" onclick="repeatLastPhrase();" hidden></div>
+  <div class="div-phrase ripple" onclick="nextPhrase()" id="prase_div" hidden>
+    <p class="phrase animated fadeIn" id="phrase">Escribid vuestros nombres arriba</p>
+  </div>
+  <div class="chose-topics-div" id="topics-div">
+    <h3 class="animated fadeInDown" id="dificulty-title">Nivel de depravación:<br><span class='notbold' id="dificulty-info">de
+        Extrovertido a Sinvergüenza</span></h3>
+    <div class="slider animated fadeInDown" id="slider"></div>
+    <div class="topics-div">
+      <div class="topic-div animated bounceInUp" onclick="selectTopic('yonunca')">
+        <h2>Yo nunca</h2>
+        <ol>
+          <li>Cualquiera <b>lee</b> en voz alta.</li>
+          <li>Quien lo haya hecho <b>bebe</b>.</li>
+        </ol>
+      </div>
+      <div class="topic-div animated bounceInUp" onclick="selectTopic('abebersehadicho')">
+        <h2>¡A beber se ha dicho!</h2>
+        <ol>
+          <li>Alguien <b>lee</b> en voz alta.</li>
+          <li>Haced lo que diga la frase.</li>
+          <li>Si <b>pierdes</b> una prueba <b>bebe</b>.</li>
+        </ol>
+      </div>
+      <div class="topic-div animated bounceInUp" onclick="selectTopic('lamoneda')">
+        <h2>La moneda</h2>
+        <ol>
+          <li><b>Responde</b> la pregunta sin leerla en voz alta.</li>
+          <li>Lanza una <b>moneda</b>.</li>
+          <li>Si sale <b>cara</b> dices cual era la pregunta.</li>
+          <li>Le toca al <b>siguiente</b>.</li>
+        </ol>
+      </div>
+      <div class="topic-div animated bounceInUp" onclick="selectTopic('perdiendolaropa')">
+        <h2>Perdiendo la ropa</h2>
+        <ol>
+          <li>Alguien <b>lee</b> la prueva en voz alta.</li>
+          <li>Si <b>pierdes</b> la prueba tienes que quitarte una prenda.</li>
+        </ol>
+      </div>
+      <div class="topic-div animated bounceInUp" onclick="selectTopic('entrelaespadaylapared')">
+        <h2>Entre la espada y la pared</h2>
+        <ol>
+          <li><b>Lee</b> y <b>responde</b> la pregunta.</li>
+          <li><b>Justifica</b> tu respuesta.</li>
+          <li>Le toca al <b>siguiente</b>.</li>
+        </ol>
+      </div>
+      <div class="topic-div animated bounceInUp" onclick="selectTopic('bodytwister')">
+        <h2>Body Twister</h2>
+        <ol>
+          <li>Alguno <b>lee</b> en voz alta.</li>
+          <li>Pon la parte del cuerpo que se indique donde se indique.</li>
+        </ol>
+      </div>
+      <div class="topic-div animated bounceInUp" onclick="selectTopic('quienes')">
+        <h2>Toc, Toc.. ¿Quién es?</h2>
+        <ol>
+          <li><b>Piensa en una persona</b> y responde las preguntas en voz alta.</li>
+          <li>Los otros tienen que intentar <b>adivinar quien es</b> lo antes posible.</li>
+        </ol>
+      </div>
+    </div>
+    <button id="share-button" type="share" class="share-button ripple" name="Compartir" onclick="share();" hidden>Compartir</button>
+  </div>
+  <script type="text/javascript">
+    var phraseContainer = document.getElementById('phrase');
+    var topicsDiv = document.getElementById('topics-div');
+    var phraseDiv = document.getElementById('prase_div');
+    var prevDiv = document.getElementById('prev-div');
+    var mode_button = document.getElementById('mode_button');
+    var titleH1 = document.getElementById('title');
+    var inputPlayers = document.getElementById('players');
+    var dificultySlider = document.getElementById('slider');
+    var dificultyInfo = document.getElementById('dificulty-info');
+    var dificultyTitle = document.getElementById('dificulty-title');
+    var phrases = [];
+    var players = [];
+    var dificulty = [1, 3];
+    var dificultyNames = ["Niño", "Extrovertido", "Adolescente", "Sinvergüenza", "Pervertido"]
+    var phraseIndex = 0;
+    setDelays();
+    noUiSlider.create(dificultySlider, {
+      start: [1, 3],
+      step: 1,
+      behaviour: 'tap',
+      connect: true,
+      range: {
+        'min': 0,
+        'max': 4
+      }
+    });
+    if (navigator.share) {
+      document.getElementById('share-button').hidden = false;
+    }
+    dificultySlider.noUiSlider.on('update', function (values, handle) {
+      dificulty = [Math.round(values[0]), Math.round(values[1])];
+      dificultyInfo.innerHTML = "de " + dificultyNames[dificulty[0]] + " a " + dificultyNames[dificulty[1]];
+    });
+    window.onpopstate = function (event) {
+      window.location.href = window.location.href;
+    };
+
+    function nextPhrase() {
+      if (players.length >= 1) {
+        if (phraseIndex >= phrases.length) {
+          phraseContainer.textContent = "Frases agotadas, toca aquí para volver a empezar";
+          phraseIndex = 0;
+          shuffleArray(phrases);
+        } else {
+          phraseContainer.textContent = completePhrase(phrases[phraseIndex]);
+          ++phraseIndex;
+        }
+      } else {
+        $('#players').removeClass('fadeInDown');
+        $('#players').animateCss('shake');
+        phraseContainer.textContent = "Escribid vuestros nombres arriba";
+      }
+    }
+
+    function completePhrase(phrase) {
+      var p1 = randomName();
+      var p2 = randomNameNotMe(p1);
+      var p3 = randomNameNotUs(p1, p2);
+      var p4 = randomNameNotUsThree(p1, p2, p3);
+      phrase = phrase.replaceAll("%p1%", p1); //first player
+      phrase = phrase.replaceAll("%p2%", p2); //second player
+      phrase = phrase.replaceAll("%p3%", p3); //third player
+      phrase = phrase.replaceAll("%p4%", p4); //fourth player
+      phrase = phrase.replaceAll("%2%", randomIntFromInterval(1, 2)); //random number from 1 to 2
+      phrase = phrase.replaceAll("%3%", randomIntFromInterval(1, 3)); //random number from 1 to 3
+      phrase = phrase.replaceAll("%4%", randomIntFromInterval(1, 4)); //random number from 1 to 4
+      phrase = phrase.replaceAll("%5%", randomIntFromInterval(1, 5)); //random number from 1 to 5
+      phrase = phrase.replaceAll("%6%", randomIntFromInterval(1, 6)); //random number from 1 to 6
+      phrase = phrase.replaceAll("%7%", randomIntFromInterval(1, 7)); //random number from 1 to 7
+      phrase = phrase.replaceAll("%8%", randomIntFromInterval(1, 8)); //random number from 1 to 8
+      phrase = phrase.replaceAll("%9%", randomIntFromInterval(1, 9)); //random number from 1 to 9
+      phrase = phrase.replaceAll("%10%", randomIntFromInterval(1, 10)); //random number from 1 to 10
+      phrase = phrase.replaceAll("%2-3%", randomIntFromInterval(2, 3)); //random number from 2 to 3
+      phrase = phrase.replaceAll("%2-4%", randomIntFromInterval(2, 4)); //random number from 2 to 4
+      phrase = phrase.replaceAll("%2-5%", randomIntFromInterval(2, 5)); //random number from 2 to 5
+      phrase = phrase.replaceAll("%2-6%", randomIntFromInterval(2, 6)); //random number from 2 to 6
+      phrase = phrase.replaceAll("%2-7%", randomIntFromInterval(2, 7)); //random number from 2 to 7
+      phrase = phrase.replaceAll("%2-8%", randomIntFromInterval(2, 8)); //random number from 2 to 8
+      phrase = phrase.replaceAll("%2-9%", randomIntFromInterval(2, 9)); //random number from 2 to 9
+      phrase = phrase.replaceAll("%2-10%", randomIntFromInterval(2, 10)); //random number from 2 to 10
+      phrase = phrase.replaceAll("%5-10%", randomIntFromInterval(5, 10)); //random number from 5 to 10
+      return phrase;
+    }
+    String.prototype.replaceAll = function (find, replace) {
+      var str = this;
+      return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+    };
+
+    function shuffleArray(array) {
+      for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      console.log("Phrases shuffled");
+      return array;
+    }
+
+    function repeatLastPhrase() {
+      if (phraseIndex <= 1) {
+        phraseContainer.textContent = "Frases agotadas, toca aquí para volver a empezar";
+        phraseIndex = 0;
+      } else {
+        --phraseIndex;
+        phraseContainer.textContent = completePhrase(phrases[phraseIndex - 1]);
+      }
+      //$('#phrase').removeClass('fadeIn');
+      //$('#phrase').animateCss('rubberBand');
+    }
+
+    function getPlayers() {
+      players = inputPlayers.value.split(/[ ,:.]+/)
+      players = players.filter(function (n) {
+        return n != ""
+      });
+      for (var i = 0; i < players.length; i++) {
+        players[i] = players[i].charAt(0).toUpperCase() + players[i].slice(1);
+      }
+      players = players.filter(function (elem, index, self) {
+        return index == self.indexOf(elem);
+      });
+      inputPlayers.value = players.join(' ');
+    }
+
+    function playersOK() {
+      if (players.length >= 1) {
+        phraseContainer.textContent = "Muy bien, toca aquí para empezar";
+      } else {
+        $('#players').removeClass('fadeInDown');
+        $('#players').animateCss('shake');
+        phraseContainer.textContent = "Escribid vuestros nombres arriba";
+      }
+    }
+
+    function choseTopic() {
+      $('.topic-div').animateCss('bounceInUp');
+      $('#players').animateCss('fadeOut');
+      $('#phrase').animateCss('fadeOut');
+      $('#slider').animateCss('fadeInDown');
+      $('#dificulty-title').animateCss('fadeInDown');
+      $('#mode_button').animateCss('fadeOutLeft');
+      topicsDiv.hidden = false;
+      prevDiv.hidden = true;
+      setDelays();
+      setTimeout(function () {
+        mode_button.firstChild.hidden = true;
+        mode_button.hidden = true;
+        inputPlayers.hidden = true;
+        phraseDiv.hidden = true;
+        $(".topic-div").removeClass("bounceInUp");
+        $('#players').removeClass('fadeOut');
+        $('#phrase').removeClass('fadeOut');
+        $('#mode_button').removeClass('fadeOutLeft');
+        $('#slider').removeClass('fadeInDown');
+        $('#dificulty-title').removeClass('fadeInDown');
+        $('#title').animateCss('fadeIn');
+        titleH1.hidden = false;
+      }, 950);
+    }
+
+    function showGame() {
+      phraseDiv.hidden = false;
+      prevDiv.hidden = false;
+      $('.topic-div').animateCss('bounceOutDown');
+      $('#title').animateCss('fadeOut');
+      $('#slider').animateCss('fadeOutUp');
+      $('#dificulty-title').animateCss('fadeOutUp');
+      $('#mode_button').animateCss('fadeInLeft');
+      $('#players').animateCss('fadeInDown');
+      setDelays();
+      mode_button.firstChild.hidden = false;
+      setTimeout(function () {
+        topicsDiv.hidden = true;
+        titleH1.hidden = true;
+        mode_button.hidden = false;
+        inputPlayers.hidden = false;
+        $(".topic-div").removeClass("bounceOutDown");
+        $('#title').removeClass('fadeOut');
+        $('#slider').removeClass('fadeOutUp');
+        $('#dificulty-title').removeClass('fadeOutUp');
+        $('#mode_button').removeClass('fadeInLeft');
+      }, 950);
+    }
+
+    function selectTopic(topic) {
+      phrases = [];
+      $(function () {
+        $.get('modes/' + topic + '.txt', function (data) {
+          phrases = data.split('\n');
+          console.log("Loaded " + topic + " phrases");
+          shuffleArray(phrases);
+        });
+      });
+      phraseIndex = 0;
+      playersOK();
+      history.pushState({}, topic, '');
+      showGame();
+    }
+
+    function randomIntFromInterval(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function randomName() {
+      if (players.length < 1) {
+        return "J1";
+      } else {
+        var name = players[randomIntFromInterval(0, players.length - 1)];
+        return name;
+      }
+    }
+
+    function randomNameNotMe(myName) {
+      if (players.length < 2) {
+        return "J2";
+      } else {
+        var name = players[randomIntFromInterval(0, players.length - 1)];
+        if (name !== myName) {
+          return name;
+        } else {
+          return randomNameNotMe(myName);
+        }
+      }
+    }
+
+    function randomNameNotUs(myName, otherMyName) {
+      if (players.length < 3) {
+        return "J3";
+      } else {
+        var name = players[randomIntFromInterval(0, players.length - 1)];
+        if ((name !== myName) && (name !== otherMyName)) {
+          return name;
+        } else {
+          return randomNameNotUs(myName, otherMyName);
+        }
+      }
+    }
+
+    function randomNameNotUsThree(myName, otherMyName, otherOtherMyName) {
+      if (players.length < 4) {
+        return "J4";
+      } else {
+        var name = players[randomIntFromInterval(0, players.length - 1)];
+        if ((name !== myName) && (name !== otherMyName) && (name !== otherOtherMyName)) {
+          return name;
+        } else {
+          return randomNameNotUsThree(myName, otherMyName, otherOtherMyName);
+        }
+      }
+    }
+
+    function setDelays() {
+      $(".topic-div").each(function (index) {
+        $(this).css("animation-delay", (0.0005 * ($(this).position().top - $(".topic-div").first().position().top)) + "s");
+      });
+    }
+    $.fn.extend({
+      animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function () {
+          $(this).removeClass('animated ' + animationName);
+        });
+        return this;
+      }
+    });
+
+    function share() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'El Juego de Baco',
+          text: 'Diviértete con tus amigos y conócelos a fondo 😏',
+          url: 'http://play.mauriciabad.com/',
+        }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
+      }
+    }
+
+    function changeThemeColor() {
+      var metaThemeColor = document.querySelector("meta[name=theme-color]");
+      metaThemeColor.setAttribute("content", getRandomColor());
+      setTimeout(function () {
+        changeThemeColor();
+      }, 3000);
+    }
+
+    function getRandomColor() {
+      var r = randomIntFromInterval(0, 255),
+        g = randomIntFromInterval(0, 255),
+        b = randomIntFromInterval(0, 255);
+      return "#" + (((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1));
+    }
+  </script>
+</body>
+
+</html>

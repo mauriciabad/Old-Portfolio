@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400" rel="stylesheet">
+  <title>Base converter</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#28b67b">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-100348659-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <script>
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('/converter/sw.js')
+             .then(function() { console.log("Service Worker Registered"); });
+  }
+  </script>
+
+  <script type="text/javascript">
+
+  function fromBin() {
+    if(/[^01]/.test(document.getElementById("bin").value)){
+      document.getElementById("hex").value = "";
+      document.getElementById("dec").value = "";
+      document.getElementById("er-bin").style.display = "inline-block";
+      document.getElementById("er-dec").style.display = "none";
+      document.getElementById("er-hex").style.display = "none";
+    } else{
+      document.getElementById("er-bin").style.display = "none";
+      document.getElementById("er-dec").style.display = "none";
+      document.getElementById("er-hex").style.display = "none";
+
+      var x = parseInt(document.getElementById("bin").value,2);
+      if(Number.isNaN(x)){
+        document.getElementById("hex").value = "";
+        document.getElementById("dec").value = "";
+      } else{
+        document.getElementById("hex").value = x.toString(16);
+        document.getElementById("dec").value = x.toString(10);
+      }
+    }
+  }
+
+  function fromHex() {
+    if(/[^0-9a-fA-F]/.test(document.getElementById("hex").value)){
+      document.getElementById("bin").value = "";
+      document.getElementById("dec").value = "";
+      document.getElementById("er-hex").style.display = "inline-block";
+      document.getElementById("er-bin").style.display = "none";
+      document.getElementById("er-dec").style.display = "none";
+    } else{
+      document.getElementById("er-bin").style.display = "none";
+      document.getElementById("er-dec").style.display = "none";
+      document.getElementById("er-hex").style.display = "none";
+
+      var x = parseInt(document.getElementById("hex").value,16);
+      if(Number.isNaN(x)){
+        document.getElementById("bin").value = "";
+        document.getElementById("dec").value = "";
+      } else{
+        document.getElementById("bin").value = x.toString(2);
+        document.getElementById("dec").value = x.toString(10);
+      }
+    }
+  }
+
+  function fromDec() {
+    if(/[^0-9]/.test(document.getElementById("dec").value)){
+      document.getElementById("hex").value = "";
+      document.getElementById("bin").value = "";
+      document.getElementById("er-dec").style.display = "inline-block";
+      document.getElementById("er-bin").style.display = "none";
+      document.getElementById("er-hex").style.display = "none";
+    } else{
+      document.getElementById("er-bin").style.display = "none";
+      document.getElementById("er-dec").style.display = "none";
+      document.getElementById("er-hex").style.display = "none";
+
+      var x = parseInt(document.getElementById("dec").value,10);
+      if(Number.isNaN(x)){
+        document.getElementById("bin").value = "";
+        document.getElementById("hex").value = "";
+      } else{
+        document.getElementById("bin").value = x.toString(2);
+        document.getElementById("hex").value = x.toString(16);
+      }
+    }
+  }
+
+  </script>
+
+  <style media="screen">
+    body{
+      font-family: 'Fira Sans', sans-serif;
+      background-color: #2dcb89;
+      text-align: center;
+      color: rgba(0,0,0,0.45);
+      margin: 0;
+    }
+
+    h1{
+      font-weight: 400;
+      margin: 0;
+      font-size: 2em;
+      color: rgba(0,0,0,0.4);
+    }
+
+    h2{
+      font-weight: 400;
+      margin: 0;
+      font-size: 1.3em;
+      color: rgba(0,0,0,0.3);
+    }
+
+    label{
+      margin: 0 0 0 0.3em;
+      font-weight: bold;
+      font-size: 1.17em;
+    }
+
+    .block{
+      padding: 0;
+      margin: 1em;
+      text-align: left;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .warn{
+      margin-left: 8px;
+      margin-bottom: -3px;
+      display: none;
+    }
+
+    .top{
+      background-color: rgba(0,0,0,0.1);
+      padding: 2em;
+    }
+
+    input{
+      background-color: rgba(0,0,0,0.1);
+      color: white;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.5em;
+      letter-spacing: 0.25em;
+      padding: 0.5em;
+      outline: none;
+      border: none;
+    }
+
+    textarea{
+      background-color: rgba(0,0,0,0.1);
+      color: white;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.5em;
+      letter-spacing: 0.25em;
+      padding: 0.5em;
+      outline: none;
+      border: none;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="top">
+    <h1>Base Converter</h1>
+    <h2>Type anywhere to convert</h2>
+  </div>
+  <div>
+    <div class="block">
+      <div>
+        <img src="warning.svg" id="er-bin" alt="1em" class="warn">
+        <label style="display: inline-block;" for="bin">Binary</label>
+      </div>
+      <textarea onkeyup="fromBin()" id="bin" style="width:90%" rows="1"></textarea>
+    </div>
+    <div class="block">
+      <div>
+        <img src="warning.svg" id="er-hex" alt="1em" class="warn">
+        <label style="display: inline-block;" for="hex">Hexadecimal</label>
+      </div>
+      <textarea onkeyup="fromHex()" id="hex" style="text-transform:uppercase; width:90%" rows="1"></textarea>
+    </div>
+    <div class="block">
+      <div>
+        <img src="warning.svg" id="er-dec" alt="1em" class="warn">
+        <label style="display: inline-block;" for="dec">Decimal</label>
+      </div>
+      <textarea onkeyup="fromDec()" id="dec" style="width:90%" rows="1"></textarea>
+    </div>
+  </div>
+</body>
+</html>
