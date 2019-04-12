@@ -4,3 +4,8 @@ deny from all
 ErrorDocument 404 /404.html
 RedirectMatch 301 ^/CV/(.*)$ https://www.mauriciabad.com/Maurici_Abad_Gutierrez_-_Curriculum_Vitae.pdf
 order deny,allow
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.mauriciabad\.com [NC]
+RewriteRule ^(.*)$ http://mauriciabad.com/$1 [L,R=301]
+</IfModule>
