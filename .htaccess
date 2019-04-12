@@ -7,5 +7,5 @@ order deny,allow
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.mauriciabad\.com [NC]
-RewriteRule ^(.*)$ http://mauriciabad.com/$1 [L,R=301]
+RewriteRule ^(.*)$ https://mauriciabad.com/$1 [L,R=301]
 </IfModule>
