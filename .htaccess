@@ -1,8 +1,3 @@
-# remove www from host
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{HTTP_HOST} ^www\.mauriciabad\.com$ [NC]
-RewriteRule ^(.*)$ http://mauriciabad.com/$1 [L,R=301]
-
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
