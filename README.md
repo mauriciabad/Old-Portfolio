@@ -2,7 +2,7 @@
 
 ## Ideas
 
-Font: poppins
+Font: [Poppins](https://fonts.google.com/specimen/Poppins)
 
 ### Examples
 
