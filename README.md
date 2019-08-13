@@ -2,7 +2,10 @@
 
 ## Ideas
 
-Font: [Poppins](https://fonts.google.com/specimen/Poppins)
+### Fonts
+
+- [Poppins](https://fonts.google.com/specimen/Poppins) (like Gotham)
+- [Inter](https://rsms.me/inter/) (Variable font)
 
 ### Examples
 
