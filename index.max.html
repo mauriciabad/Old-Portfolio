@@ -1146,7 +1146,7 @@
 
   <script type="text/javascript">
     var ageSpan = document.getElementById('age');
-    var age = (Date.now() - new Date(1998,0,29,6)) / 31557600000;
+    var age = (Date.now() - Date(1998,0,29,0,15)) / 31557600000;
     var lastTime;
     
     window.requestAnimationFrame(updateAge);
