@@ -1,6 +1,0 @@
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-ErrorDocument 404 /404.html
-RedirectMatch 301 ^/CV/(.*)$ https://mauriciabad.com/Maurici_Abad_Gutierrez_-_Curriculum_Vitae.pdf
-order deny,allow
