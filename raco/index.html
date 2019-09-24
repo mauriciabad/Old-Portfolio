@@ -1,52 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-  <title>Racó Web App</title>
-  <meta name="description" content="L'aplicació mes útil del racó">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Latest compiled and minified jQuery -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="moment.js"></script>
-
-  <script src="script.js"></script>
-
-</head>
-<body onload="checkLogStatus()">
-  <nav class="nav-bar">
-    <button type="button" name="schedule" class="nav-btn" id="nav-schedule" onclick="changeTabTo('schedule')"><img src="clock.svg" alt="Schedule" class="nav-img"></button>
-    <button type="button" name="news" class="nav-btn" id="nav-news" onclick="changeTabTo('news')"><img src="bell.svg" alt="News" class="nav-img"></button>
-    <button type="button" name="marcks" class="nav-btn" id="nav-marcks" onclick="changeTabTo('marcks')"><img src="diploma.svg" alt="Marcks" class="nav-img"></button>
-    <button type="button" name="others" class="nav-btn" id="nav-others" onclick="changeTabTo('others')"><img src="apple.svg" alt="Others" class="nav-img"></button>
-  </nav>
-
-  <div class="div-content">
-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <title>Racó Web App</title>
+  <meta name="description" content="L'aplicació mes útil del racó">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Latest compiled and minified jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="moment.js"></script>
+
+  <script src="script.js"></script>
+
+</head>
+
+<body onload="checkLogStatus()">
+  <nav class="nav-bar">
+    <button type="button" name="schedule" class="nav-btn" id="nav-schedule" onclick="changeTabTo('schedule')"><img
+        src="clock.svg" alt="Schedule" class="nav-img"></button>
+    <button type="button" name="news" class="nav-btn" id="nav-news" onclick="changeTabTo('news')"><img src="bell.svg"
+        alt="News" class="nav-img"></button>
+    <button type="button" name="marcks" class="nav-btn" id="nav-marcks" onclick="changeTabTo('marcks')"><img
+        src="diploma.svg" alt="Marcks" class="nav-img"></button>
+    <button type="button" name="others" class="nav-btn" id="nav-others" onclick="changeTabTo('others')"><img
+        src="apple.svg" alt="Others" class="nav-img"></button>
+  </nav>
+
+  <div class="div-content">
+
     <div class="div-login" id="div-login" style="display: none">
-      <h1>Has d'iniciar sessió</h1>
-      <button onclick="racoLogin()" id="login-button" class="btn btn-2 btn-2g">Login</button>
-      <p>1. Logeja't al Racó de la FIB</p>
-      <p>2. Autoritza Racó App</p>
-    </div>
-
-    <div class="div-schedule" id="div-schedule" style="display: none"></div>
-
-    <div class="div-news" id="div-news" style="display: none"></div>
-
-    <div class="div-marcks" id="div-marcks" style="display: none">Què necessito per aprovar? - En desenvolupament</div>
-
-    <div class="div-others" id="div-others" style="display: none">
-      <img id="foto" src="">
-      <p id="others-my-name">My Name</p>
-    </div>
-
-  </div>
-
-  <div id="snackbar"></div>
-
-</body>
-</html>
+      <h1>Has d'iniciar sessió</h1>
+      <button onclick="racoLogin()" id="login-button" class="btn btn-2 btn-2g">Login</button>
+      <p>1. Logeja't al Racó de la FIB</p>
+      <p>2. Autoritza Racó App</p>
+    </div>
+
+    <div class="div-schedule" id="div-schedule" style="display: none"></div>
+
+    <div class="div-news" id="div-news" style="display: none"></div>
+
+    <div class="div-marcks" id="div-marcks" style="display: none">Què necessito per aprovar? - En desenvolupament</div>
+
+    <div class="div-others" id="div-others" style="display: none">
+      <img id="foto" src="">
+      <p id="others-my-name">My Name</p>
+    </div>
+
+  </div>
+
+  <div id="snackbar"></div>
+
+</body>
+
+</html>
