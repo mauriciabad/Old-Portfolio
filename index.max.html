@@ -556,18 +556,18 @@
         </a>
       </div>
 
-      <form class="form-container" method="post" action="sent.php">
+      <div class="form-container">
         <h3>Something to say?</h3>
-        <input class="form-concept form-in" type="text" name="subject" placeholder="Subject" aria-placeholder="Subject" spellcheck="true" autocomplete="off" aria-label="Subject" aria-required="true" required>
-        <input class="form-email form-in" type="email" name="email" placeholder="sender@gmail.com" aria-placeholder="placeholder" inputmode="email" autocomplete="email" autocapitalize="off" aria-label="Sender eMail" aria-required="true" required>
-        <textarea class="form-message form-in" name="message" placeholder="Message" aria-placeholder="Message" maxlength=2000 aria-label="Message content" aria-required="true" required></textarea>
-        <label class="container" role="checkbox">
+        <input id="form-concept" class="form-concept form-in" type="text" name="subject" placeholder="Subject" aria-placeholder="Subject" spellcheck="true" autocomplete="off" aria-label="Subject" aria-required="true" required>
+        <!-- <input id="form-email" class="form-email form-in" type="email" name="email" placeholder="sender@gmail.com" aria-placeholder="placeholder" inputmode="email" autocomplete="email" autocapitalize="off" aria-label="Sender eMail" aria-required="true" required> -->
+        <textarea id="form-message" class="form-message form-in" name="message" placeholder="Message" aria-placeholder="Message" maxlength=2000 aria-label="Message content" aria-required="true" required></textarea>
+        <!-- <label class="container" role="checkbox">
           Send me a copy
           <input type="checkbox" name="cc" class="form-checkbox" checked>
           <span class="checkmark"></span>
-        </label>
-        <input class="form-submit" type="submit" name="submit" value="Send">
-      </form>
+        </label> -->
+        <button class="form-submit" onclick="window.open(`mailto:hello@mauriciabad.com?subject=${document.getElementById('form-concept').value}&body=${document.getElementById('form-message').value}`);">Send</button>
+      </div>
     </div>
     <footer><b>Made</b> with <img src="img/heart.svg" alt="❤" class="heart"> by <b>Maurici</b></footer>
   </section>
@@ -1012,8 +1012,9 @@
     font-weight: bold;
   }
   .form-message{
-    height: 6em;
+    height: 9em;
   }
+  /*
   .container {
     position: relative;
     padding-right: 35px;
@@ -1066,6 +1067,7 @@
     transform: rotate(45deg);
     transition: all 0.2s ease-out;
   }
+  */
   .form-submit{
     -webkit-appearance: none; /*Borrar---------- */
     appearance: none;
