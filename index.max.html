@@ -304,11 +304,11 @@
         <img src="img/mauri.jpg" alt="Portrait Picture">
       </div>
       <div class="about-info">
-        <p class="about-p" >I'm Maurici Abad Gutierrez, a student of <a href="https://www.fib.upc.edu/en/studies/bachelors-degrees/bachelor-degree-informatics-engineering" hreflang="en">Computer Engineering</a> in Barcelona. I'm a creative person with great ideas and self-demanding. I work better in a team, I'm also a good team leader, I adapt quickly and learn fast</p>
+        <p class="about-p" >I'm Maurici Abad Gutierrez, a <a href="https://www.fib.upc.edu/en/studies/bachelors-degrees/bachelor-degree-informatics-engineering" hreflang="en">Software Engineering</a> student who loves JavaScript, User Experience design and Pasta. My mission is to help people developing nice apps.</p>
         <div class="about-more-info">
           <span><b>Age</b>: <span id="age"><span>20</span><span class="about-age-small"></span></span></span>
-          <span><b>Location</b>: Barcelona and Costa Brava</span>
-          <span><b>Interests</b>: User Experience && Web && Software development.</span>
+          <span><b>Location</b>: Barcelona &amp; Costa Brava</span>
+          <span><b>Interests</b>: User Experience &amp; Web</span>
         </div>
       </div>
     </div>
@@ -713,13 +713,11 @@
   }
   .about-more-info{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0 1em;
+    flex-direction: column;
+    padding: 0 2em;
   }
   .about-more-info > span{
-    margin: 0.5em;
-    flex-basis: 1;
+    margin: 0.5em 0;
     white-space: nowrap;
   }
   .about-more-info > span:first-child{
@@ -1071,7 +1069,6 @@
   .form-submit{
     -webkit-appearance: none; /*Borrar---------- */
     appearance: none;
-    border: none;
     background-color: #966cac;
     border-radius: 0.5em;
     color: #fff;
