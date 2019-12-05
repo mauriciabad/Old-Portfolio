@@ -215,7 +215,7 @@
     user-select: none;
     color: white;
     text-decoration: none;
-    padding: 3vh 0em 3vh 1.5em;
+    padding: 4.5vh 0em 4.5vh 1.5em;
     margin: 0em;
     transform-origin: 0% 50%;
     transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -255,7 +255,7 @@
       width: calc(100% - 1.5em);
     }
     .nav a{
-      padding: 5vw;
+      padding: 2.5vw 7.5vw;
       width: 1em;
       transform: rotate(60deg);
       text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.33);
@@ -266,6 +266,7 @@
     .arrow{
       bottom: 4em;
     }
+    .pj-gh img {display: none;}
   }
   </style>
 </head>
@@ -284,11 +285,11 @@
     </div>
 
     <nav class="nav">
-      <a href="#welcome">Welcome</a>
+      <!-- <a href="#welcome">Welcome</a> -->
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#resume">Résumé</a>
-      <a href="#contact">Contact</a>
+      <!-- <a href="#contact">Contact</a> -->
     </nav>
 
     <a href="#about"><svg viewBox="0 0 10 9" class="arrow"><title>Scroll down</title><path d="M1,3 L5,6 L9,3" /></svg></a>
@@ -527,10 +528,10 @@
       <a onclick="javascript:_gaq.push(['_trackEvent','download','cv']); void(0);" href="Maurici_Abad_Gutierrez_-_Curriculum_Vitae.pdf" class="resume-action" download="Maurici Abad Gutierrez CV"><img src="img/download.svg" alt="Download"></a>
       <button type="button" class="resume-action" onclick="printJS('Maurici_Abad_Gutierrez_-_Curriculum_Vitae.pdf'); _gaq.push(['_trackEvent','print','cv']); void(0);"><img src="img/print.svg" alt="Print"></button>
     </div>
+    <footer><b>Made</b> with <img src="img/heart.svg" alt="❤" class="heart"> by <b>Maurici</b></footer>
   </section>
 
-
-
+<!-- 
   <section id="contact">
     <h2>CONTACT</h2>
     <div class="contact-content">
@@ -565,19 +566,18 @@
       <div class="form-container">
         <h3>Something to say?</h3>
         <input id="form-concept" class="form-concept form-in" type="text" name="subject" placeholder="Subject" aria-placeholder="Subject" spellcheck="true" autocomplete="off" aria-label="Subject" aria-required="true" required>
-        <!-- <input id="form-email" class="form-email form-in" type="email" name="email" placeholder="sender@gmail.com" aria-placeholder="placeholder" inputmode="email" autocomplete="email" autocapitalize="off" aria-label="Sender eMail" aria-required="true" required> -->
+        <input id="form-email" class="form-email form-in" type="email" name="email" placeholder="sender@gmail.com" aria-placeholder="placeholder" inputmode="email" autocomplete="email" autocapitalize="off" aria-label="Sender eMail" aria-required="true" required>
         <textarea id="form-message" class="form-message form-in" name="message" placeholder="Message" aria-placeholder="Message" maxlength=2000 aria-label="Message content" aria-required="true" required></textarea>
-        <!-- <label class="container" role="checkbox">
+        <label class="container" role="checkbox">
           Send me a copy
           <input type="checkbox" name="cc" class="form-checkbox" checked>
           <span class="checkmark"></span>
-        </label> -->
+        </label>
         <button class="form-submit" onclick="window.open(`mailto:hello@mauriciabad.com?subject=${document.getElementById('form-concept').value}&body=${document.getElementById('form-message').value}`);">Send</button>
       </div>
     </div>
-    <footer><b>Made</b> with <img src="img/heart.svg" alt="❤" class="heart"> by <b>Maurici</b></footer>
-  </section>
-
+  </section> 
+  -->
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900|Vibur|Quicksand:400,700" rel="stylesheet">
   <style media="all">
@@ -617,17 +617,16 @@
   #resume{
     border-top: solid 1em hsl(205, 100%, 55%);
     background: #313131 url("img/wood2.png") repeat;
-    padding-bottom: 2em;
     text-align: center;
   }
   #resume h2{
     color: hsl(205, 100%, 62%);
     text-shadow: 0 1px 0 hsl(205, 100%, 60%), 0 2px 0 hsl(205, 100%, 55%), 0 3px 0 hsl(205, 100%, 50%), 0 4px 0 hsl(205, 100%, 46%), 0 5px 0 hsl(205, 100%, 44%), 0 6px 0 hsl(205, 100%, 42%), 0 0 14px rgba(0,0,0,0.3), 0 7px 7px rgba(0,0,0,0.3);
   }
-  #contact{
+  /* #contact{
     border-top: solid 1em #91bd5f;
     background: #ECECEC url("img/confectionary2.png") repeat;
-    /* animation: animatedBackground 30s linear infinite; */
+    animation: animatedBackground 30s linear infinite;
   }
   @keyframes animatedBackground {
   	from { background-position: 0 0; }
@@ -636,7 +635,7 @@
   #contact h2{
     color: hsl(88, 46%, 62%);
     text-shadow:     0 1px 0 hsl(88, 46%, 60%), 0 2px 0 hsl(88, 48%, 55%), 0 3px 0 hsl(88, 44%, 50%), 0 4px 0 hsl(88, 46%, 46%), 0 5px 0 hsl(88, 46%, 44%), 0 6px 0 hsl(88, 46%, 42%), 0 7px 7px rgba(0,0,0,0.3);
-  }
+  } */
   h2{
     font: 900 4em "Source Sans Pro", Arial, sans-serif;
     margin: 0.2em auto;
@@ -787,6 +786,7 @@
     text-decoration: none;
     padding: 1rem;
     max-width: 70.5rem;
+    min-width: 17rem;
     width: calc(100% - 5.5rem);
     margin: 0 auto 0.75rem;
     position: relative;
@@ -1121,8 +1121,9 @@
     transition: all 0.2s ease-out;
   }
   */
+  /*   
   .form-submit{
-    -webkit-appearance: none; /*Borrar---------- */
+    -webkit-appearance: none; 
     appearance: none;
     background-color: #966cac;
     border-radius: 0.5em;
@@ -1145,8 +1146,10 @@
   .form-submit:active{
     box-shadow: 0 0.1em 0 hsl(279, 27%, 34%), 0 0.1em 0.6em rgba(0,0,0,0.6);
     transform: translateY(0.3em);
-  }
-  #contact footer{
+  } 
+  */
+  #resume footer{
+    margin-top: 2em;
     text-align: center;
     padding: 0.2em 0 0.3em;
     position: relative;
@@ -1158,7 +1161,7 @@
     vertical-align: -0.15em;
     transition: transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29);
   }
-  #contact footer:hover .heart{
+  #resume footer:hover .heart{
     transform: scale(1.333);
   }
   </style>
