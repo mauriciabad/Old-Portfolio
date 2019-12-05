@@ -309,6 +309,23 @@
           <span><b>Location</b>: Barcelona &amp; Costa Brava</span>
           <span><b>Interests</b>: User Experience &amp; Web</span>
         </div>
+        <div class="about-contact">
+          <a href="https://www.instagram.com/maurijefe/">
+            <div><img src="img/instagram_logo.svg" alt="@maurijefe"></div>
+          </a>
+          <a href="https://codepen.io/MauriciAbad/">
+            <div><img src="img/codepen_logo.svg" alt="mauriciabad"></div>
+          </a>
+          <a href="https://github.com/mauriciabad/">
+            <div><img src="img/github_logo.svg" alt="mauriciabad" style="width: 4em;"></div>
+          </a>
+          <a href="https://devpost.com/mauriciabad">
+            <div><img src="img/devpost.svg" alt="mauriciabad"></div>
+          </a>
+          <a href="https://www.linkedin.com/in/mauriciabad/">
+            <div><img src="img/linkedin_logo.svg" alt="Mauric Abad Gutierrez"></div>
+          </a>
+        </div>
       </div>
     </div>
   </main>
@@ -512,6 +529,16 @@
     <h2>CONTACT</h2>
     <div class="contact-content">
       <div class="social">
+        <a href="https://github.com/mauriciabad/">
+          <div>
+            <img src="img/github_logo.svg" alt="mauriciabad"><span>GitHub</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/mauriciabad/">
+          <div>
+            <img src="img/linkedin_logo.svg" alt="Mauric Abad Gutierrez"><span>LinkedIn</span>
+          </div>
+        </a>
         <a href="https://www.instagram.com/maurijefe/">
           <div>
             <img src="img/instagram_logo.svg" alt="@maurijefe"><span>Instagram</span>
@@ -525,16 +552,6 @@
         <a href="https://devpost.com/mauriciabad">
           <div>
             <img src="img/devpost.svg" alt="mauriciabad"><span>Devpost</span>
-          </div>
-        </a>
-        <a href="https://github.com/mauriciabad/">
-          <div>
-            <img src="img/github_logo.svg" alt="mauriciabad"><span>GitHub</span>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/mauriciabad/">
-          <div>
-            <img src="img/linkedin_logo.svg" alt="Mauric Abad Gutierrez"><span>LinkedIn</span>
           </div>
         </a>
       </div>
@@ -634,7 +651,7 @@
     position: relative;
   }
 
-  .about-pic::before{
+  /* .about-pic::before{
     content: "";
     border: dotted 0.3em #c3af80;
     height: calc(100vw - 7.5em);
@@ -648,23 +665,23 @@
     animation: rot 120s infinite linear;
     will-change: transform;
     filter: opacity(1);
-  }
-  @keyframes rot {
+  } */
+  /* @keyframes rot {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
-  }
-  .about-pic{
+  } */
+  /* .about-pic{
     pointer-events: none;
-  }
+  } */
   .about-pic > img{
     border-radius: 50%;
     width: calc(100vw - 8em);
     max-width: 15em;
     max-height: 15em;
     margin: 2em;
-    border: solid 0.8em #b79b5c;
-    box-shadow: 0.2em 0.8em 0 0 #9d8859;
-    pointer-events: auto;
+    box-shadow: 
+      0 0.125em 1.5em rgba(0, 0, 0, 0.29), 
+      0 0.25em 4em rgba(0, 0, 0, 0.21);
   }
   .about-info{
     flex-grow: 1;
@@ -713,6 +730,22 @@
     font-size: 0.9em;
     opacity: 0.75;
     font-family: monospace;
+  }
+  .about-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    margin: 1em auto 0;
+    max-width: 21em;
+  }
+  .about-contact img {
+    width: 2.25em;
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    z-index: 1;
+  }
+  .about-contact img:hover {
+    transform: scale(1.2);
   }
 
   .t-red{background-color: #e95e5e;}
