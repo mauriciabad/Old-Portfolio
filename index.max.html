@@ -337,6 +337,12 @@
 
     <h2>Projects</h2>
 
+    <a class="pj-gh" href="https://github.com/mauriciabad">
+      <img src="img/github_logo.svg" alt="GitHub Logo">
+      <span>Check out all my projects in <u>GitHub</u></span>
+      <img src="img/github_logo.svg" alt="GitHub Logo">
+  </a>
+
     <div class="pj-container">
       <div class="pj">
         <a href="https://gradecalc.net/" hreflang="es"><div><figure>
@@ -358,7 +364,7 @@
           <img src="img/langton-ant-3D.png" alt="Langton's Ant 3D Screenshot">
           <figcaption>
             <h3>Langton's Ant 3D</h3>
-            <p>Langton's Ant visualization in 3 dimensions where you can play around! Made in under 10 hours at UPC HackNights.</p>
+            <p>Langton's Ant visualization in 3 dimensions where you can play around!</p>
             <ul>
               <li class="t-green">Three.js</li>
               <li class="t-yellow"><abbr title="JavaScript">JS</abbr></li>
@@ -372,7 +378,7 @@
           <img src="img/vacuumwars.png" alt="Vacuum Wars Screenshot">
           <figcaption>
             <h3>Vacuum Wars</h3>
-            <p>A game for the LauzHack that's a frenetic multiplayer battle between many vacuums.</p>
+            <p>A frenetic multiplayer game battle between many vacuums. Made at LauzHack.</p>
             <ul>
               <li class="t-white">Socket IO</li>
               <li class="t-green">Node.js</li>
@@ -387,7 +393,7 @@
           <img src="img/hacknights.png" alt="Hack Nights Screenshot">
           <figcaption>
             <h3>Hack Nights</h3>
-            <p>A landing page for en event hosted by Hackers@UPC. It consists on a one night hackathon.</p>
+            <p>A landing page for en event hosted by Hackers@UPC.</p>
             <ul>
               <li class="t-orange"><abbr title="JavaScript Object Notation">JSON</abbr></li>
               <li class="t-cian">CSS</li>
@@ -760,12 +766,41 @@
   .t-white{background-color: #dddddd; color: #2f2f2f;}
   .t-black{background-color: #555555;}
 
-  .crown{
+  /* .crown{
     width: 2em;
     position: absolute;
     top: 0.7em;
     left: -0.8em;
     transform: rotate(-20deg);
+  } */
+  .pj-gh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.6), 0 0.2rem 1rem 0 rgba(0,0,0,0.2);
+    transition-duration: 0.3s;
+    border-radius: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #38342d;
+    text-decoration: none;
+    padding: 1rem;
+    max-width: 70.5rem;
+    width: calc(100% - 5.5rem);
+    margin: 0 auto 0.75rem;
+    position: relative;
+    line-height: 1.5;
+  }
+  .pj-gh:hover {
+    box-shadow:  0 0 1em rgba(255, 255, 255, 0.6), 0 0.2em 1em 0 rgba(0,0,0,0.2);
+  }
+  .pj-gh span {
+    margin: 0 2vw;
+  }
+  .pj-gh img {
+    height: 2rem;
+    margin: 0 1rem;
   }
   .pj-container{
     display: flex;
@@ -785,7 +820,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 24em;
-    min-width: 18em;
+    min-width: 19em;
     flex-basis: 0;
     height: 133px;
   }
@@ -855,6 +890,7 @@
     font-size: 1em;
     text-align: left;
     flex-grow: 1;
+    overflow: hidden;
   }
   .pj figure h3 {
     font-weight: bold;
