@@ -48,6 +48,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "postcss-sass": "^0.4.2",
+    "resolve-url-loader": "^3.1.1",
     "robotstxt-webpack-plugin": "^6.0.0",
     "sass-loader": "^7.3.1",
     "sitemap-webpack-plugin": "^0.6.0",

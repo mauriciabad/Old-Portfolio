@@ -72,6 +72,9 @@ const sass = {
     cssLoader,
     postcssLoader,
     {
+      loader: "resolve-url-loader"
+    },
+    {
       loader: 'sass-loader',
       options: {
         sourceMap,
