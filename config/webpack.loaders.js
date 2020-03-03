@@ -128,9 +128,8 @@ const images = {
       loader: 'file-loader',
       options: {
         name: '[path][name].[ext]',
-        context: path.resolve(__dirname, 'src/'),
         outputPath: 'dist/',
-        publicPath: '../',
+        publicPath: 'src/images',
         useRelativePaths: true,
       },
     },
