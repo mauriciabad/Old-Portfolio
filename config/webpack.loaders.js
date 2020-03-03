@@ -158,7 +158,7 @@ const videos = {
 };
 
 const particles = {
-  test: /particles\.js/,
+  test: /particles\.js$/,
   use: 'exports-loader?particlesJS=window.particlesJS,pJSDom=window.pJSDom',
 };
 
