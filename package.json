@@ -66,6 +66,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "copy-webpack-plugin": "^5.1.1",
     "normalize.css": "^8.0.1",
     "particles.js": "^2.0.0",
     "webpack-dev-server": "^3.10.1"
