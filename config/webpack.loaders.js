@@ -1,5 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
+// const path = require('path');
 const config = require('./site.config');
 
 // Define common loader constants
@@ -73,7 +73,7 @@ const sass = {
     cssLoader,
     postcssLoader,
     {
-      loader: "resolve-url-loader"
+      loader: 'resolve-url-loader',
     },
     {
       loader: 'sass-loader',
@@ -128,12 +128,11 @@ const images = {
       loader: 'file-loader',
       options: {
         name: '[path][name].[ext]',
-        outputPath: 'dist/',
-        publicPath: 'src/images',
-        useRelativePaths: true,
+        // outputPath: 'dist/',
+        // publicPath: 'src/images',
+        // useRelativePaths: true,
       },
     },
-    'file-loader?name=[path][name].[ext]',
     config.env === 'production' ? imageLoader : null,
   ].filter(Boolean),
 };
