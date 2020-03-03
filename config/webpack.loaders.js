@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 const config = require('./site.config');
 
 // Define common loader constants
@@ -123,6 +124,16 @@ const images = {
   test: /\.(gif|png|jpe?g|svg)$/i,
   exclude: /fonts/,
   use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[path][name].[ext]',
+        context: path.resolve(__dirname, 'src/'),
+        outputPath: 'dist/',
+        publicPath: '../',
+        useRelativePaths: true,
+      },
+    },
     'file-loader?name=[path][name].[ext]',
     config.env === 'production' ? imageLoader : null,
   ].filter(Boolean),
