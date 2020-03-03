@@ -1,11 +1,14 @@
 language: node_js
 
 node_js:
-  - lts/*
+  - "node"
 
 cache:
   directories:
     - node_modules
+
+before_install:
+  - npm install -g @lhci/cli
 
 install:
   - SKIP_SETUP=true npm install
@@ -14,6 +17,10 @@ script:
   - npm run lint:styles
   - npm run lint:js
   - npm run build:dist
+  after_success:
+    - lhci autorun
+  addons:
+    chrome: stable # for lighthouse
 
 dist: trusty
 sudo: false
