@@ -6,7 +6,7 @@
 
 #about {
   border-top: solid 1em #b79b5c;
-  background: #fafafa url("images/triangles2.png") repeat;
+  background: #fafafa url("/images/triangles2.png") repeat;
   background-position: center;
 
   /* animation: animatedBackground 60s linear infinite; */
@@ -40,7 +40,7 @@
 
 #resume {
   border-top: solid 1em hsl(205, 100%, 55%);
-  background: #313131 url("images/wood2.png") repeat;
+  background: #313131 url("/images/wood2.png") repeat;
   text-align: center;
 }
 
@@ -51,7 +51,7 @@
 
 /* #contact{
   border-top: solid 1em #91bd5f;
-  background: #ECECEC url("images/confectionary2.png") repeat;
+  background: #ECECEC url("/images/confectionary2.png") repeat;
   animation: animatedBackground 30s linear infinite;
 }
 @keyframes animatedBackground {

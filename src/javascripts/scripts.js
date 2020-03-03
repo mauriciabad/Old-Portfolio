@@ -3,6 +3,7 @@
 import 'babel-polyfill';
 import 'particlesjs';
 import particles from '../data/particles.json';
+
 particlesJS("projects-bg", particles);
 
 var ageSpan = document.getElementById('age');
