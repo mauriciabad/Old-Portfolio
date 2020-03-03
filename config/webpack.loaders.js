@@ -123,7 +123,7 @@ const images = {
   test: /\.(gif|png|jpe?g|svg)$/i,
   exclude: /fonts/,
   use: [
-    'file-loader?name=[path][name].[hash].[ext]',
+    'file-loader?name=[path][name].[ext]',
     config.env === 'production' ? imageLoader : null,
   ].filter(Boolean),
 };
