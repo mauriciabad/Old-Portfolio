@@ -6,8 +6,6 @@ Use it here: https://mauriciabad.com/
 
 Author: [Maurici Abad](https://mauriciabad.com/)
 
-![Screenshot](/doc/screenshot.png)
-
 ## Build
 
 ```bash
