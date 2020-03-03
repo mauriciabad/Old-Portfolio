@@ -61,6 +61,8 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
 
   if (filename !== '404.html') {
     paths.push(filename);
+  } else {
+    return new HTMLWebpackPlugin({ filename });
   }
 
   return new HTMLWebpackPlugin({
