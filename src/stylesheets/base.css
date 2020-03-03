@@ -65,7 +65,7 @@ body {
 .name2 p:nth-child(4) { animation-delay: 12s; }
 
 h1 {
-  font: 900 5em "Source Sans Pro", Arial, sans-serif;
+  font: 900 5em "Source Sans Pro", Arial, sans-serif !important;
   margin: 0;
   animation: show-text 1.8s cubic-bezier(0.22, 0.61, 0.36, 1);
   color: #d8e0e4;

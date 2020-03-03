@@ -59,7 +59,7 @@ h2 {
 }
 
 abbr {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .about-content {
