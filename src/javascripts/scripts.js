@@ -4,20 +4,23 @@ import 'babel-polyfill';
 import 'particlesjs';
 import particles from '../data/particles.json';
 
-particlesJS("projects-bg", particles);
+particlesJS('projects-bg', particles);
 
-var ageSpan = document.getElementById('age');
-var age = (Date.now() - new Date(1998,0,29,0,15)) / 31557600000;
-var lastTime;
+let ageSpan = document.getElementById('age');
+let age = (Date.now() - new Date(1998, 0, 29, 0, 15)) / 31557600000;
+let lastTime;
+
+function updateAge(currentTime) {
+  if(!lastTime) lastTime = currentTime;
+  dif = currentTime - lastTime;
+  lastTime = currentTime;
+  age += dif / 31557600000;
+
+  ageSpan.children[0].textContent = age.toFixed(10).slice(0,3);
+  ageSpan.children[1].textContent = age.toFixed(10).slice(3);
+
+  window.requestAnimationFrame(updateAge);
+}
 
 window.requestAnimationFrame(updateAge);
 
-function updateAge(currentTime) {
-  if(!lastTime){lastTime = currentTime;}
-  dif = currentTime - lastTime; lastTime = currentTime;
-  age += dif / 31557600000;
-  ageSpan.children[0].textContent = makeString(age).slice(0,3);
-  ageSpan.children[1].textContent = makeString(age).slice(3);
-  window.requestAnimationFrame(updateAge);
-}
-function makeString(n) { return n.toFixed(10); }
