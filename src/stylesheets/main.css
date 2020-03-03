@@ -58,6 +58,10 @@ h2 {
   text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%), 0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%), 0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%);
 }
 
+abbr {
+  text-decoration: none;
+}
+
 .about-content {
   display: flex;
   flex-wrap: wrap;
