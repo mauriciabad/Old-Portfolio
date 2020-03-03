@@ -1,10 +1,10 @@
 /* eslint-disable import/no-webpack-loader-syntax */
 /* eslint-disable no-console */
 import 'babel-polyfill';
-import particlesJS from 'particlesjs';
+import particlesJS from 'particles.js';
 import particles from '../data/particles.json';
 
-particlesJS('projects-bg', particles);
+particlesJS.load('projects-bg', particles);
 
 const ageSpan = document.getElementById('age');
 let age = (Date.now() - new Date(1998, 0, 29, 0, 15)) / 31557600000;

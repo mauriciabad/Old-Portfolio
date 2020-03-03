@@ -65,7 +65,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "normalize.css": "^8.0.1",
-    "particlesjs": "^2.2.3",
+    "particles.js": "^2.0.0",
     "webpack-dev-server": "^3.10.1"
   }
 }
