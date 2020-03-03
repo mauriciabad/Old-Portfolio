@@ -159,7 +159,7 @@ const videos = {
 
 const particles = {
   test: /particles\.js/,
-  loader: 'exports?particlesJS=window.particlesJS,pJSDom=window.pJSDom'
+  use: 'exports?particlesJS=window.particlesJS,pJSDom=window.pJSDom'
 };
 
 module.exports = [
