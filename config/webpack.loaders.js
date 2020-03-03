@@ -111,7 +111,7 @@ const imageLoader = {
       optimizationLevel: 7,
     },
     pngquant: {
-      quality: '65-90',
+      quality: [65, 90],
       speed: 4,
     },
     mozjpeg: {
