@@ -1,6 +1,5 @@
 /* eslint-disable import/no-webpack-loader-syntax */
 /* eslint-disable no-console */
-import 'babel-polyfill';
 import particles from 'particles.js';
 
 particles.particlesJS.load('projects-bg', '/data/particles.json');
