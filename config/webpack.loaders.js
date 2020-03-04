@@ -128,6 +128,7 @@ const images = {
       loader: 'file-loader',
       options: {
         name: '[path][name].[ext]',
+        esModule: false,
         // outputPath: 'dist/',
         // publicPath: 'src/images',
         // useRelativePaths: true,
