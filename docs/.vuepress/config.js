@@ -8,16 +8,10 @@ module.exports = {
   themeConfig: {
   authors: [
       {
-      name: 'Sal',
+      name: 'Maurici Abad',
       avatar: '/assets/img/sal.jpg',
       link: 'https://mauriciabad.com',
-      linktext: 'Follow',
-      },
-      {
-        name: 'John Doe',
-        avatar: '/assets/img/avatar.png',
-        link: 'https://mauriciabad.com',
-        linktext: 'Follow',
+      linktext: 'Website',
       },
     ],
     footer: {

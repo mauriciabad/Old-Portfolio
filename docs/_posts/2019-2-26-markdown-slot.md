@@ -4,7 +4,7 @@ date: 2019-2-26
 tags: 
   - markdown
   - vuepress
-author: Sal
+author: Maurici Abad
 featuredimg: https://images.unsplash.com/photo-1569851409587-7e3a27cbfe1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=946&q=80
 summary: VuePress implements a content distribution API for Markdown.
 ---
