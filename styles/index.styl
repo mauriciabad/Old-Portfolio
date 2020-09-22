@@ -1,4 +1,3 @@
-@require './font.styl'
 @require './config.styl'
 @require './code.styl'
 @require './wrapper.styl'
@@ -7,14 +6,14 @@
 
 @import '../node_modules/bootstrap-4-stylus/bootstrap.styl'
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap")
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700&display=swap")
 
 $green = #03a87c
 $color_1 = rgba(0, 0, 0, 0.54)
 $color_2 = rgba(0, 0, 0, 0.44)
 $color_3 = rgba(0, 0, 0, 0.8)
-$primary_font_family = 'Source Sans Pro'
-$second_font_family = 'Merriweather'
+$primary_font_family = 'Poppins'
+$second_font_family = $primary_font_family
 body
   font-family: $primary_font_family
   padding-top: 120px
@@ -173,7 +172,7 @@ nav
     color: $green
     text-decoration:none
 .article-head, .content__default
-  font-family: 'Merriweather'
+  font-family: 'Poppins'
   line-height:1.3
 .card-subheading.post-meta-tags a
   font-size: 16px

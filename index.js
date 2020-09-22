@@ -125,9 +125,7 @@ module.exports = themeConfig => {
         ? themeConfig.paginationComponent
         : 'Pagination',
     },
-    alias: {
-      fonts: path.resolve(__dirname, 'fonts'),
-    },
+
     /**
      * Generate summary.
      */
