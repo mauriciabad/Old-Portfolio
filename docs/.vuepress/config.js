@@ -9,7 +9,7 @@ module.exports = {
   authors: [
       {
       name: 'Maurici Abad',
-      avatar: '/assets/img/avatar.png',
+      avatar: '/assets/img/profile-pic-mauriciabad.png',
       link: 'https://mauriciabad.com',
       linktext: 'Website',
       },
