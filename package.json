@@ -1,21 +1,27 @@
 {
-  "name": "vuepress-theme-mediumish",
-  "version": "1.0.32",
-  "description": "Mediumish blog theme for VuePress",
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "Portfolio online Maurici Abad",
   "keywords": [
     "vue",
     "vuepress",
-    "vuepress-theme",
-    "blog-theme",
-    "blog",
-    "theme"
+    "portfolio",
+    "mauriciabad",
+    "blog"
   ],
+  "homepage": "https://github.com/mauriciabad/Portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/mauriciabad/Portfolio/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "wowthemesnet/mediumish-vuepress-blog-theme"
+    "url": "git+https://github.com/mauriciabad/Portfolio.git"
   },
   "license": "MIT",
-  "author": "sal<wowthemesnet@gmail.com>",
+  "author": {
+    "name": "Maurici Aabd Gutierrez",
+    "url": "https://mauriciabad.com"
+  },
   "main": "index.js",
   "files": [
     "index.js",
@@ -26,10 +32,10 @@
     "components"
   ],
   "scripts": {
-    "docs:build": "vuepress build docs --temp docs/.temp",
-    "docs:dev": "vuepress dev docs --temp docs/.temp",
     "build": "vuepress build docs",
     "dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs --temp docs/.temp",
+    "docs:dev": "vuepress dev docs --temp docs/.temp",
     "lint": "eslint . --ext .js,.vue",
     "prepublishOnly": "npm run test && npm run docs:build && conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
     "start": "yarn dev",

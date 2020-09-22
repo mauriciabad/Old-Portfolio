@@ -1,8 +1,8 @@
 module.exports = {
-  title: 'Mediumish',
+  title: 'Maurici Abad',
   base: '/',
   dest: 'public',
-  description: 'Mediumish theme with VuePress and Forestry',
+  description: 'Personal website of Maurici Abad Gutierrez, a Software Engineer in Barcelona. It contains information about him, projects and blog posts.',
   logo: './assets/img/logo.png',
   theme: require.resolve('../../'),
   themeConfig: {
@@ -10,13 +10,13 @@ module.exports = {
       {
       name: 'Sal',
       avatar: '/assets/img/sal.jpg',
-      link: 'https://wowthemes.net/donate',
+      link: 'https://mauriciabad.com',
       linktext: 'Follow',
       },
       {
         name: 'John Doe',
         avatar: '/assets/img/avatar.png',
-        link: 'https://bootstrapstarter.com/',
+        link: 'https://mauriciabad.com',
         linktext: 'Follow',
       },
     ],
@@ -24,15 +24,15 @@ module.exports = {
       contact: [
         {
           type: 'codepen',
-          link: '#',
+          link: 'https://codepen.com/mauriciabad',
         },
         {
           type: 'facebook',
-          link: '#',
+          link: 'https://facebook.com/mauriciabad',
         },
         {
           type: 'github',
-          link: 'https://github.com/wowthemesnet/mediumish-vuepress-blog-theme',
+          link: 'https://github.com/mauriciabad',
         },
         {
           type: 'gitlab',
@@ -40,15 +40,15 @@ module.exports = {
         },
         {
           type: 'instagram',
-          link: '#',
+          link: 'https://ginstagram.com/mauriciabad',
         },
         {
           type: 'linkedin',
-          link: '#',
+          link: 'https://linkedin.com/mauriciabad',
         },
         {
           type: 'mail',
-          link: '#',
+          link: 'hello@mauriciabad.com',
         },
         {
           type: 'messenger',
@@ -60,37 +60,37 @@ module.exports = {
         },
         {
           type: 'twitter',
-          link: 'https://twitter.com/wowthemesnet',
+          link: 'https://twitter.com/mauriciabad',
         },
         {
           type: 'web',
-          link: '#',
+          link: 'https://mauriciabad.com',
         }
       ],
       copyright: [
         {
           text: 'Licensed MIT.',
-          link: 'https://bootstrapstarter.com/license/',
+          link: 'https://opensource.org/licenses/MIT',
         },
         {
-          text: 'Made with Mediumish - free Vuepress theme',
-          link: 'https://bootstrapstarter.com/bootstrap-templates/vuepress-theme-mediumish/',
+          text: 'Made with ❤ by Maurici Abad',
+          link: 'https://mauriciabad.com',
         },
       ],
     },
 
     sitemap: {
-      hostname: 'https://github.com/wowthemesnet/vuepress-theme-mediumish/'
+      hostname: 'https://mauriciabad.com/'
     },
     comment: {
       service: 'disqus',
       shortname: 'demowebsite',
     },
     newsletter: {
-      endpoint: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&id=8c3d2d214b'
+      endpoint: '#'
     },
     feed: {
-      canonical_base: 'https://github.com/wowthemesnet/vuepress-theme-mediumish/',
+      canonical_base: 'https://mauriciabad.com/',
     },
     smoothScroll: true
   },
