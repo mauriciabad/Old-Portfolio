@@ -1,20 +1,35 @@
-# Portfolio online Maurici Abad
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/462144c8-3176-4313-b2cd-d564b0ac5391/deploy-status)](https://app.netlify.com/sites/mauri/deploys) [![Build Status](https://travis-ci.com/mauriciabad/Portfolio.svg?branch=master)](https://travis-ci.com/mauriciabad/Portfolio)
+# VuePress Theme Mediumish
 
-Use it here: https://mauriciabad.com/
+This is a free VuePress Bootstrap Blogging Theme, Medium styled, fully featured: multi author, search, categories, newsletter, Disqus, RSS, sitemap, TOC, Prism, 100% Github pages compatible, ready for automatic deployment.
 
-Author: [Maurici Abad](https://mauriciabad.com/)
+[View Demo](https://wowthemesnet.github.io/vuepress-theme-mediumish/) | [View Documentation](https://bootstrapstarter.com/bootstrap-templates/vuepress-theme-mediumish/)
 
-## Build
+![mediumish vuepress blogging theme](https://wowthemesnet.github.io/vuepress-theme-mediumish/assets/img/screenshot.jpg)
 
-```bash
-npm install
-npm start
+## Content Management
+
+<a href="https://app.forestry.io/quick-start?repo=dirtyf/mediumish-vuepress-blog-theme&engine=vuepress">
+    <img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" />
+</a>
+
+Import in [Forestry](https://forestry.io) to be able to edit and preview your posts before publishing.
+
+![Edit in Forestry CMS](docs/.vuepress/public/assets/img/forestry-cms-mediumsih.jpg)
+
+## Development
+
+```
+# install dependencies
+yarn 
+# preview changes locally
+yarn start
 ```
 
-Once the page is built, your default browser will open on https://localhost:8080/
+## Deployment
 
-## Deploy
+Import your repository in [Vercel](http://vercel.com) and deploy for free
 
-100% automated with Netlify, just push to master. 🧙🏻‍♂️
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git)
+
+
