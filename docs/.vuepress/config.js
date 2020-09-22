@@ -80,9 +80,6 @@ module.exports = {
       service: 'disqus',
       shortname: 'demowebsite',
     },
-    newsletter: {
-      endpoint: '#'
-    },
     feed: {
       canonical_base: 'https://mauriciabad.com/',
     },

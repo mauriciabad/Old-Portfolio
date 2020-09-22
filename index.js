@@ -71,7 +71,6 @@ module.exports = themeConfig => {
     'globalPagination',
     'sitemap',
     'comment',
-    'newsletter',
   ]
 
   const themeConfigPluginOptions = {
