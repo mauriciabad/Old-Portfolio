@@ -1,6 +1,5 @@
 const removeMd = require('remove-markdown')
 const path = require('path')
-const pick = require('lodash/pick')
 
 module.exports = themeConfig => {
   /**
@@ -67,16 +66,14 @@ module.exports = themeConfig => {
     })
   }
 
-  const properties = [
-    'directories',
-    'frontmatters',
-    'globalPagination',
-    'sitemap',
-    'comment',
-    'newsletter',
-  ]
   const themeConfigPluginOptions = {
-    ...pick(themeConfig, properties),
+    directories: themeConfig.directories,
+    frontmatters: themeConfig.frontmatters,
+    globalPagination: themeConfig.globalPagination,
+    sitemap: themeConfig.sitemap,
+    comment: themeConfig.comment,
+    newsletter: themeConfig.newsletter,
+
     feed: resolvedFeedOptions,
   }
 
