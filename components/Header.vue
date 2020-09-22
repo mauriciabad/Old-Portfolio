@@ -4,7 +4,7 @@
 <div class="header-wrapper">
 <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
 <div class="container">
-<NavLink link="/" class="navbar-brand"><img :src="($withBase)($themeConfig.logo)"> {{ $site.title }} </NavLink>
+<NavLink link="/" class="navbar-brand"><img :src="($withBase)($themeConfig.logo)"></NavLink>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
