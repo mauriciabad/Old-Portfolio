@@ -28,13 +28,7 @@
                 class="ui-post-meta ui-post-tag"
                 itemprop="keywords"
               >
-                <router-link
-                  v-for="tag in resolvePostTags(page.frontmatter.tags)"
-                  :key="tag"
-                  :to="'/tag/' + tag"
-                >
-                  {{ tag }}
-                </router-link>
+                <span>{{ tag }}</span>
               </div>
             </div>
             <h2 class="heading" itemprop="name headline">

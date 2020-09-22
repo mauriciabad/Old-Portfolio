@@ -12,10 +12,6 @@ module.exports = themeConfig => {
         text: 'Blog',
         link: '/',
       },
-      {
-        text: 'Tags',
-        link: '/tag/',
-      },
     ],
     summary: themeConfig.summary === undefined ? true : themeConfig.summary,
     summaryLength:
@@ -36,13 +32,7 @@ module.exports = themeConfig => {
         path: '/',
       },
     ],
-    frontmatters: [
-      {
-        id: 'tag',
-        keys: ['tags'],
-        path: '/tag/',
-      },
-    ],
+    frontmatters: [],
     globalPagination: {
       lengthPerPage: 6,
     },

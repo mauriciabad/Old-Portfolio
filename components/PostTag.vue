@@ -1,7 +1,5 @@
 <template>
-
-    <router-link :to="'/tag/' + tag"> {{ tag }} </router-link>
-
+  <span>{{ tag }}</span>
 </template>
 
 <script>
@@ -28,7 +26,7 @@ export default {
   &:not(:last-child)
     margin-right 10px
 
-  a
+  span
     color $postTagColor
     text-decoration none
     transition color 0.2s
@@ -60,6 +58,6 @@ export default {
     &:after
       border-left-color $accentColor
 
-    a
+    span
       color #fff
 </style>
