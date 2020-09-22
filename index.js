@@ -66,14 +66,26 @@ module.exports = themeConfig => {
     })
   }
 
-  const themeConfigPluginOptions = {
-    directories: themeConfig.directories,
-    frontmatters: themeConfig.frontmatters,
-    globalPagination: themeConfig.globalPagination,
-    sitemap: themeConfig.sitemap,
-    comment: themeConfig.comment,
-    newsletter: themeConfig.newsletter,
+  function pick(object, keys) {
+    return keys.reduce((obj, key) => {
+      if (object && object.hasOwnProperty(key)) {
+        obj[key] = object[key]
+      }
+      return obj
+    }, {})
+  }
 
+  const properties = [
+    'directories',
+    'frontmatters',
+    'globalPagination',
+    'sitemap',
+    'comment',
+    'newsletter',
+  ]
+
+  const themeConfigPluginOptions = {
+    ...pick(themeConfig, properties),
     feed: resolvedFeedOptions,
   }
 
