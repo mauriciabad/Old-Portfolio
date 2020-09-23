@@ -18,15 +18,20 @@ fields:
   config:
     maxSize: 10
   label: preview
-- name: source_code_url
-  type: text
-  config:
-    required: false
-  label: Source code URL
-- name: preview_url
-  type: text
-  config:
-    required: false
-  label: Preview URL
+- name: actions
+  type: field_group
+  config: {}
+  fields:
+  - name: source_code_url
+    type: text
+    config:
+      required: false
+    label: Source code URL
+  - name: preview_url
+    type: text
+    config:
+      required: false
+    label: Preview URL
+  label: Actions
 pages:
 - docs/_projects/hackupc-landing.md
