@@ -41,20 +41,16 @@
         <Comment />
       </div>
     </div>
-
-    <Toc />
   </div>
 </template>
 
 <script>
-import Toc from '@theme/components/Toc.vue'
 import PostMeta from '@theme/components/PostMeta.vue'
 import Avatar from '@theme/components/Avatar.vue'
 import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
   components: {
-    Toc,
     PostMeta,
     Avatar,
     Comment,
