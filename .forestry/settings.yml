@@ -12,12 +12,12 @@ sections:
   templates:
   - post
 - type: directory
-  path: docs
-  label: Pages
+  path: docs/_projects
+  label: Projects
   create: documents
   match: "*.md"
   templates:
-  - page
+  - project
 upload_dir: docs/.vuepress/public/assets/img
 public_path: "/assets/img"
 front_matter_path: ''

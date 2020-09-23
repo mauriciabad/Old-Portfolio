@@ -17,4 +17,4 @@ fields:
   config:
     maxSize: 10
   label: preview
-pages:
+pages: []
