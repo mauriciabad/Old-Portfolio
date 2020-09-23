@@ -1,8 +1,9 @@
 module.exports = {
   title: 'Maurici Abad',
+  description: 'Personal website of Maurici Abad Gutierrez, a Software Engineer in Barcelona. It contains information about him, projects and blog posts.',
+  lang: 'en-GB',
   base: '/',
   dest: 'public',
-  description: 'Personal website of Maurici Abad Gutierrez, a Software Engineer in Barcelona. It contains information about him, projects and blog posts.',
   logo: './assets/img/logo.svg',
   theme: require.resolve('../../'),
   themeConfig: {
