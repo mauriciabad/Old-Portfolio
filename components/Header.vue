@@ -1,31 +1,43 @@
 <template>
-<section id="header-wrapper">
-<header id="header">
-<div class="header-wrapper">
-<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
-<div class="container">
-<NavLink link="/" class="navbar-brand"><img :src="($withBase)($themeConfig.logo)"></NavLink>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-<ul v-if="$themeConfig.nav" class="navbar-nav ml-auto">
-<li
-v-for="item in $themeConfig.nav"
-:key="item.text"
-class="nav-item"
->
-<NavLink :link="item.link" class="nav-link">{{ item.text }}</NavLink>
-</li>
-<SearchBox />
-<Feed />
-</ul>
-</div>
-</div>
-</nav>
-</div>
-</header>
-</section>
+  <section id="header-wrapper">
+    <header id="header">
+      <div class="header-wrapper">
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+          <div class="container">
+            <NavLink link="/" class="navbar-brand"
+              ><img :src="$withBase($themeConfig.logo)"
+            /></NavLink>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarsExampleDefault"
+              aria-controls="navbarsExampleDefault"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarsExampleDefault" class="collapse navbar-collapse">
+              <ul v-if="$themeConfig.nav" class="navbar-nav ml-auto">
+                <li
+                  v-for="item in $themeConfig.nav"
+                  :key="item.text"
+                  class="nav-item"
+                >
+                  <NavLink :link="item.link" class="nav-link">{{
+                    item.text
+                  }}</NavLink>
+                </li>
+                <SearchBox />
+                <Feed />
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </section>
 </template>
 
 <script>
