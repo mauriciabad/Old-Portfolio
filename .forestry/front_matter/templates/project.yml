@@ -1,0 +1,20 @@
+---
+label: Project
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
+- name: preview
+  type: file
+  config:
+    maxSize: 10
+  label: preview
+pages:
