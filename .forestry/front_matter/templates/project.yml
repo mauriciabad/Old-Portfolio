@@ -1,6 +1,7 @@
 ---
 label: Project
 hide_body: true
+display_field: title
 fields:
 - type: text
   name: title
@@ -17,5 +18,15 @@ fields:
   config:
     maxSize: 10
   label: preview
+- name: source_code_url
+  type: text
+  config:
+    required: false
+  label: Source code URL
+- name: preview_url
+  type: text
+  config:
+    required: false
+  label: Preview URL
 pages:
 - docs/_projects/hackupc-landing.md
