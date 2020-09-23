@@ -61,16 +61,6 @@ module.exports = {
           link: 'https://mauriciabad.com',
         }
       ],
-      copyright: [
-        {
-          text: 'Licensed MIT.',
-          link: 'https://opensource.org/licenses/MIT',
-        },
-        {
-          text: 'Made with ❤ by Maurici Abad',
-          link: 'https://mauriciabad.com',
-        },
-      ],
     },
 
     sitemap: {
