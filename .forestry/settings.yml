@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url: 
+webhook_url:
 sections:
 - type: directory
   path: docs/_posts
@@ -18,8 +18,8 @@ sections:
   match: "*.md"
   templates:
   - project
-upload_dir: docs/.vuepress/public/assets/img
-public_path: "/assets/img"
+upload_dir: docs/.vuepress/public/assets/blog-img
+public_path: "/assets/blog-img"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
