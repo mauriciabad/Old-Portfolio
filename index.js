@@ -9,8 +9,16 @@ module.exports = themeConfig => {
     logo: '/assets/img/logo.svg',
     nav: themeConfig.nav || [
       {
+        text: 'About',
+        link: '#about',
+      },
+      {
+        text: 'Projects',
+        link: '#projects',
+      },
+      {
         text: 'Blog',
-        link: '/',
+        link: '/blog',
       },
     ],
     summary: themeConfig.summary === undefined ? true : themeConfig.summary,
