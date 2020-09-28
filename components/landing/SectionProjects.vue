@@ -3,9 +3,17 @@
     <div class="bg" aria-hidden="true">
       <div class="bg-gradient"></div>
     </div>
-    <h2>Projects</h2>
+    <Title>Projects</Title>
   </section>
 </template>
+
+<script>
+import Title from '@theme/components/landing/Title.vue'
+
+export default {
+  components: { Title },
+}
+</script>
 
 <style lang="stylus" scoped>
 section
