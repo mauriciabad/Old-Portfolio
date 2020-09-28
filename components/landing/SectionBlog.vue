@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <h2>Blog</h2>
 
     <div itemscope itemtype="http://schema.org/Blog">
@@ -7,7 +7,7 @@
         <PostPreview v-if="pages[i]" :key="pages[i].key" :page="pages[i]" />
       </template>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

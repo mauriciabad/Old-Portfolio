@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <main class="hero">
     <div class="info">
       <h1 class="title">Web developer<br />& UI/UX Designer</h1>
       <p class="desc">
@@ -35,7 +35,7 @@
       <p>or <a href="mailto:hello@mauriciabad.com">hello@mauriciabad.com</a></p>
     </div>
     <ImageHero />
-  </div>
+  </main>
 </template>
 
 <script>
