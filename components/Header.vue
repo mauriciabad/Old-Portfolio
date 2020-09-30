@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <nav class="navbar">
+    <nav class="max-width-layout navbar">
       <NavLink link="/" class="brand">
         <img :src="$withBase($themeConfig.logo)" />
       </NavLink>
@@ -47,10 +47,7 @@ export default {
 .navbar
   display flex
   justify-content space-between
-  max-width 1000px
-  margin 0 auto
   line-height 1
-  padding 0
 .brand img
   display block
   height 1.75rem

@@ -10,12 +10,27 @@ $color_2 = rgba(0, 0, 0, 0.44)
 $color_3 = rgba(0, 0, 0, 0.8)
 $primary_font_family = 'Poppins'
 $second_font_family = $primary_font_family
+
+// custom //
+
 body
   margin: 0
   overflow-x: hidden
 
+.max-width-layout
+  max-width $contentWidth
+  mardin-left auto
+  mardin-right auto
+  padding-left 2rem
+  padding-right 2rem
+  @media (max-width: $MQMobile)
+    padding-left 1rem
+    padding-right 1rem
+
+// custom //
+
+body
   font-family: $primary_font_family
-  padding-top: 120px
   color: $color_3
   background: #fff
 .wrapmain

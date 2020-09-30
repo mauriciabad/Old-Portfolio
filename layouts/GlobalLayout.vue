@@ -1,7 +1,7 @@
 <template>
   <div id="vuepress-theme-blog__global-layout">
     <Header />
-    <div class="content-wrapper">
+    <div class="max-width-layout content">
       <DefaultGlobalLayout />
     </div>
     <Footer />
@@ -22,11 +22,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.content-wrapper
-  max-width $contentWidth
-  margin 0 auto
-  padding 2rem
-  @media (max-width: $MQMobile)
-    padding 1rem
+<style lang="stylus" scoped>
+.content
+  margin-top 3rem
 </style>
