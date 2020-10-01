@@ -37,6 +37,7 @@ export default {
   padding 0.25rem
   text-decoration none
   border-radius 0.5rem
+  font-weight 600
   box-shadow 0 0.125rem 0.5rem rgb(104 119 255 / 0.5)
 .icon
   vertical-align middle
@@ -50,4 +51,5 @@ export default {
   display inline-block
   vertical-align middle
   margin 0 0.25rem
+  letter-spacing 0.05em
 </style>
