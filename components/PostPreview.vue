@@ -67,7 +67,7 @@ export default {
   object-fit cover
   border-radius 1rem 0 0 1rem
   margin -1.5rem
-  height: calc(3rem + 100%);grid-areaimgobject-fitcoverborder-radius1rem001remmargin-1.5remheightgrid-areaimgobject-fitcoverborder-radius1rem001remmargin-1.5remheightgrid-areaimgobject-fitcoverborder-radius1rem001remmargin-1.5remheightgrid-areaimgobject-fitcoverborder-radius1rem001remmargin-1.5remheightgrid-areaimgobject-fitcoverborder-radius1rem001remmargin-1.5remheightgrid-areaimgobject-fitcoverborder-radius1rem001remmargin-1.5remheightgrid-areaimgobject-fitcoverborder-radius1rem001remmargin-1.5remheight
+  height: calc(3rem + 100%)
 
 .entry-link
   color currentColor
