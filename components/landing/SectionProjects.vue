@@ -26,14 +26,77 @@
       </div>
     </div>
     <Title>Projects</Title>
+    <div class="project-list">
+      <ProjectEntry
+        :title="'HackUPC Landing'"
+        :description="
+          'The landing page for the biggest student hackathon in Spain. '
+        "
+        :tags="['js', 'landing', 'react.js']"
+        :preview="'/assets/blog-img/hackupc-2019.png'"
+        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
+        :preview_url="'https://hackupc.com/'"
+      />
+      <ProjectEntry
+        :title="'HackUPC Landing'"
+        :description="
+          'The landing page for the biggest student hackathon in Spain. Longer description than the rest. '
+        "
+        :tags="['js', 'landing', 'react.js']"
+        :preview="'/assets/blog-img/hackupc-2019.png'"
+        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
+        :preview_url="'https://hackupc.com/'"
+      />
+      <ProjectEntry
+        :title="'HackUPC Landing'"
+        :description="
+          'The landing page for the biggest student hackathon in Spain. '
+        "
+        :tags="['js', 'landing', 'react.js']"
+        :preview="'/assets/blog-img/hackupc-2019.png'"
+        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
+        :preview_url="'https://hackupc.com/'"
+      />
+      <ProjectEntry
+        :title="'HackUPC Landing'"
+        :description="
+          'The landing page for the biggest student hackathon in Spain. '
+        "
+        :tags="['js', 'landing', 'react.js']"
+        :preview="'/assets/blog-img/hackupc-2019.png'"
+        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
+        :preview_url="'https://hackupc.com/'"
+      />
+      <ProjectEntry
+        :title="'HackUPC Landing'"
+        :description="
+          'The landing page for the biggest student hackathon in Spain. '
+        "
+        :tags="['js', 'landing', 'react.js']"
+        :preview="'/assets/blog-img/hackupc-2019.png'"
+        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
+        :preview_url="'https://hackupc.com/'"
+      />
+      <ProjectEntry
+        :title="'HackUPC Landing'"
+        :description="
+          'The landing page for the biggest student hackathon in Spain. '
+        "
+        :tags="['js', 'landing', 'react.js']"
+        :preview="'/assets/blog-img/hackupc-2019.png'"
+        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
+        :preview_url="'https://hackupc.com/'"
+      />
+    </div>
   </section>
 </template>
 
 <script>
 import Title from '@theme/components/landing/Title.vue'
+import ProjectEntry from '@theme/components/landing/ProjectEntry.vue'
 
 export default {
-  components: { Title },
+  components: { Title, ProjectEntry },
 }
 </script>
 
@@ -42,7 +105,6 @@ $dividerTopHeight = 5vw
 $dividerBotHeight = 5vw
 
 section
-  height 30rem
   position relative
   color #fff
   padding $dividerTopHeight 0 $dividerBotHeight
@@ -87,4 +149,22 @@ section
     bottom -1px
     svg
       height $dividerBotHeight
+.project-list
+  display grid
+  gap 2rem
+  grid-template repeat(2, auto) \/ repeat(3, minmax(auto, 17rem))
+  padding-bottom 3rem
+  justify-content center
+  @media (max-width: 17rem * 3 + 2rem * 2 + 2rem * 2)
+    gap 1rem
+  @media (max-width: 14rem * 3 + 1rem * 2 + 2rem * 2)
+    gap 2rem
+    grid-template repeat(3, auto) \/ repeat(2, minmax(auto, 17rem))
+  @media (max-width: 17rem * 2 + 2rem * 1 + 2rem * 2)
+    gap 1rem
+  @media (max-width: 14rem * 2 + 1rem * 1 + 2rem * 2)
+    gap 2rem
+    grid-template repeat(6, auto) \/ repeat(1, minmax(auto, 20rem))
+  @media (max-width: 20rem * 1 + 2rem * 0 + 2rem * 2)
+    gap 1rem
 </style>

@@ -32,7 +32,7 @@
           url="https://linkedin.com/in/mauriciabad"
         />
       </div>
-      <p>
+      <p class="sub-action">
         or
         <a class="email" href="mailto:hello@mauriciabad.com">
           hello@mauriciabad.com
@@ -69,6 +69,8 @@ export default {
   min-height 80vh
   align-items center
   gap 2rem
+.info
+  margin 1rem 0 2rem
 .action-buttons
   display flex
   & > *
@@ -211,6 +213,9 @@ export default {
   object-fit contain
   @media (max-width: $MQNarrow)
     display none
+
+.sub-action
+  margin 1rem 0 0
 .email
   color #6877ff
 </style>

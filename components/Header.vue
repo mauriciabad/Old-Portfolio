@@ -40,7 +40,7 @@ export default {
   right 0
   height 3rem
   background-color #fff
-  box-shadow 0 -1rem 0.75rem 1rem rgba(0,0,0,0.25)
+  box-shadow 0 -1rem 0.75rem 1rem rgba(0,0,0,0.1)
 .nav-right
   display flex
   align-items: center;

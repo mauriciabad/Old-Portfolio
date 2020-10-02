@@ -9,7 +9,8 @@ h2 {
   font-weight bold
   text-align center
   margin 0
-  padding 1rem 0
+  padding 2rem 0
+  line-height 0.8
 
   &:before, &:after {
     content '-'

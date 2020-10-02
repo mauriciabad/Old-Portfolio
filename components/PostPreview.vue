@@ -77,7 +77,8 @@ export default {
 
 .entry
   background-color #fff
-  margin 2rem
+  margin 2rem auto
+  max-width 52rem
   padding 1.5rem
   box-shadow 0 2px 8px rgba(0,0,0,0.15)
   border-radius 1rem
