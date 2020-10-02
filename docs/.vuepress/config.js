@@ -6,6 +6,28 @@ module.exports = {
   dest: 'public',
   logo: './assets/img/logo.svg',
   theme: require.resolve('../../'),
+  head: [
+    ['link', { rel: 'manifest', href: '/site.webmanifest'}],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/icons/apple-touch-icon.png'}],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icons/favicon-32x32.png'}],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icons/favicon-16x16.png'}],
+    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#6877ff'}],
+    ['link', { rel: 'shortcut icon', href: '/icons/favicon.ico'}],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'Maurici'}],
+    ['meta', { name: 'application-name', content: 'Maurici'}],
+    ['meta', { name: 'msapplication-TileColor', content: '#6877ff'}],
+    ['meta', { name: 'msapplication-config', content: '/icons/browserconfig.xml'}],
+    ['meta', { name: 'theme-color', content: '#ffffff'}],
+  ],
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      { 'ga': 'UA-100348659-1' },
+    ], [
+      '@vuepress/pwa',
+      { serviceWorker: true, updatePopup: true },
+    ]
+  ],
   themeConfig: {
   authors: [
       {
@@ -30,10 +52,6 @@ module.exports = {
           link: 'https://github.com/mauriciabad',
         },
         {
-          type: 'gitlab',
-          link: '#',
-        },
-        {
           type: 'instagram',
           link: 'https://ginstagram.com/mauriciabad',
         },
@@ -44,14 +62,6 @@ module.exports = {
         {
           type: 'mail',
           link: 'hello@mauriciabad.com',
-        },
-        {
-          type: 'messenger',
-          link: '#',
-        },
-        {
-          type: 'phone',
-          link: '#',
         },
         {
           type: 'twitter',

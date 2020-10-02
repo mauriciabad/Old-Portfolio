@@ -6,7 +6,7 @@ module.exports = themeConfig => {
    * Default theme configuration
    */
   themeConfig = Object.assign(themeConfig, {
-    logo: '/assets/img/logo.svg',
+    logo: '/assets/img/logo-black.svg',
     nav: themeConfig.nav || [
       {
         text: 'About',
