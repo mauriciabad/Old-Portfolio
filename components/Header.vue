@@ -5,12 +5,12 @@
         <img :src="$withBase($themeConfig.logo)" />
       </NavLink>
       <div class="nav-right">
+        <SearchBox />
         <ul v-if="$themeConfig.nav" class="links">
           <li v-for="item in $themeConfig.nav" :key="item.text" class="item">
             <NavLink :link="item.link" class="link">{{ item.text }}</NavLink>
           </li>
         </ul>
-        <SearchBox />
         <NavLink link="https://github.com/mauriciabad/" class="link-icon">
           <GithubIcon />
         </NavLink>
@@ -69,6 +69,7 @@ export default {
   display block
   position relative
   text-decoration none
+  color: #2f313d
   &:before
     content ''
     width 0.4rem
