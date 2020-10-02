@@ -16,8 +16,8 @@
         <h2 itemprop="name headline">{{ page.title }}</h2>
       </header>
       <section class="entry-content">
-        <p itemprop="description">
-          {{ page.frontmatter.summary || page.summary }}
+        <p class="entry-description" itemprop="description">
+          {{ page.frontmatter.contentPreview }}
         </p>
       </section>
       <footer class="entry-footer">
@@ -74,11 +74,12 @@ export default {
   text-decoration none
   border-radius 1rem
   display block
+  margin 0 auto
+  max-width 52rem
 
 .entry
   background-color #fff
-  margin 2rem auto
-  max-width 52rem
+  margin 2rem 0
   padding 1.5rem
   box-shadow 0 2px 8px rgba(0,0,0,0.15)
   border-radius 1rem
@@ -87,7 +88,45 @@ export default {
   grid-template-areas "img title"\
                       "img desc"\
                       "img footer"
+.entry-description
+  line-height 1.6
+  height 1rem * 2 * 1.6
+  overflow hidden
+  position relative
 
+  &::after
+    height: 1rem * 1.6
+    content ''
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15rem;
+    pointer-events none
+    // background: linear-gradient(
+    //   to right,
+    //   hsla(0, 0%, 100%, 0),
+    //   ease-in-out,
+    //   hsla(0, 0%, 100%, 1)
+    // )
+    background: linear-gradient(
+      to right,
+      hsla(0, 0%, 100%, 0) 0%,
+      hsla(0, 0%, 100%, 0.013) 8.1%,
+      hsla(0, 0%, 100%, 0.049) 15.5%,
+      hsla(0, 0%, 100%, 0.104) 22.5%,
+      hsla(0, 0%, 100%, 0.175) 29%,
+      hsla(0, 0%, 100%, 0.259) 35.3%,
+      hsla(0, 0%, 100%, 0.352) 41.2%,
+      hsla(0, 0%, 100%, 0.45) 47.1%,
+      hsla(0, 0%, 100%, 0.55) 52.9%,
+      hsla(0, 0%, 100%, 0.648) 58.8%,
+      hsla(0, 0%, 100%, 0.741) 64.7%,
+      hsla(0, 0%, 100%, 0.825) 71%,
+      hsla(0, 0%, 100%, 0.896) 77.5%,
+      hsla(0, 0%, 100%, 0.951) 84.5%,
+      hsla(0, 0%, 100%, 0.987) 91.9%,
+      hsl(0, 0%, 100%) 100%
+    )
 .entry-header h2
   margin 0
 </style>
