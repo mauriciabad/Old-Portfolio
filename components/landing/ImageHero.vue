@@ -1,3 +1,3 @@
 <template>
-  <img class="image" :src="$withBase('/assets/img/hero-img.png')" alt="" />
+  <img class="image" :src="$withBase('/assets/img/hero-image.png')" alt="" />
 </template>
