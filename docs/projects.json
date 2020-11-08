@@ -9,6 +9,26 @@
       "preview": "/assets/blog-img/hackupc-2019.png",
       "source_code_url": "https://github.com/hackupc/hackupc-landing",
       "preview_url": "https://hackupc.com/"
+    },
+    {
+      "title": "Advent of Corona",
+      "description": "14 coding challenges for developers during the coronavirus confinement.",
+      "tags": [
+        "WebPack"
+      ],
+      "preview": "/assets/blog-img/advent-of-corona.png",
+      "source_code_url": "https://github.com/hackupc/adventofcorona-web",
+      "preview_url": "https://adventofcorona.hackersatupc.org/"
+    },
+    {
+      "title": "GradeCalc",
+      "description": "Calculate what marks you need to pass and save them with your google account.",
+      "tags": [
+        "Vanilla JS"
+      ],
+      "preview": "/assets/blog-img/emoji-dealer.png",
+      "source_code_url": "https://github.com/mauriciabad/gradecalc",
+      "preview_url": "https://gradecalc.app"
     }
   ]
 }

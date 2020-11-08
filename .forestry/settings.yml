@@ -2,35 +2,27 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url: 
+webhook_url:
 sections:
-- type: document
-  path: docs/projects.json
-  label: Projects
-- type: directory
-  path: docs/_posts
-  label: Posts
-  create: documents
-  match: "*.md"
-  templates:
-  - post
-- type: directory
-  path: docs/_projects
-  label: Projects
-  create: documents
-  match: "*.json"
-  new_doc_ext: json
-  templates:
-  - project
+  - type: document
+    path: docs/projects.json
+    label: Projects
+  - type: directory
+    path: docs/_posts
+    label: Posts
+    create: documents
+    match: '*.md'
+    templates:
+      - post
 upload_dir: docs/.vuepress/public/assets/blog-img
-public_path: "/assets/blog-img"
+public_path: '/assets/blog-img'
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ':filename:'
 build:
   preview_output_directory: docs/.vuepress/public
   install_dependencies_command: yarn
   preview_docker_image: node:12
-  mount_path: "/srv"
-  working_dir: "/srv"
+  mount_path: '/srv'
+  working_dir: '/srv'
   instant_preview_command: yarn dev
