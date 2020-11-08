@@ -24,7 +24,7 @@
       "title": "Automata app",
       "description": "Tool for state machines to visualize, check accepted strings, converto to DFA...",
       "tags": [
-
+        "Algorithms"
       ],
       "preview": "/assets/blog-img/automata.png",
       "source_code_url": "https://github.com/mauriciabad/Automata-App",
