@@ -15,3 +15,5 @@ fields:
     max: 
     labelField: 
   label: Projects
+pages:
+- docs/projects.json

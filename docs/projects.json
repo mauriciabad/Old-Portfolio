@@ -1,1 +1,14 @@
-{}
+{
+  "projects": [
+    {
+      "title": "HackUPC landing",
+      "description": "The landing page for the biggest student hackathon in Spain. ",
+      "tags": [
+        "WebPack"
+      ],
+      "preview": "/assets/blog-img/hackupc-2019.png",
+      "source_code_url": "https://github.com/hackupc/hackupc-landing",
+      "preview_url": "https://hackupc.com/"
+    }
+  ]
+}
