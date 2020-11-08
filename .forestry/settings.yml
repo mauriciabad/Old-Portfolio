@@ -7,7 +7,6 @@ sections:
 - type: document
   path: docs/projects.json
   label: Projects
-  match: "**/*"
 - type: directory
   path: docs/_posts
   label: Posts
