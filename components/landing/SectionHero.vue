@@ -34,9 +34,9 @@
       </div>
       <p class="sub-action">
         or
-        <a class="email" href="mailto:hello@mauriciabad.com">
+        <NavLink class="email" link="mailto:hello@mauriciabad.com">
           hello@mauriciabad.com
-        </a>
+        </NavLink>
       </p>
     </div>
     <ImageHero class="image" />

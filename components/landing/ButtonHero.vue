@@ -1,8 +1,8 @@
 <template>
-  <a class="button" :href="url">
+  <NavLink :link="url" class="button">
     <span v-once class="icon" v-html="icons[icon]"></span
     ><span class="title">{{ title }}</span>
-  </a>
+  </NavLink>
 </template>
 
 <script>

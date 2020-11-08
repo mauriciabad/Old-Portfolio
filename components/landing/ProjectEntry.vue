@@ -52,9 +52,9 @@
     <h3 class="title">{{ title }}</h3>
     <p class="desctiption">{{ description }}</p>
     <div class="action-bar">
-      <a
+      <NavLink
         v-if="source_code_url"
-        :href="source_code_url"
+        :link="source_code_url"
         class="action action--code"
       >
         <svg
@@ -69,9 +69,13 @@
           />
         </svg>
         <span>Code</span>
-      </a>
+      </NavLink>
       <div v-if="source_code_url && preview_url" class="separator"></div>
-      <a v-if="preview_url" :href="preview_url" class="action action--preview">
+      <NavLink
+        v-if="preview_url"
+        :link="preview_url"
+        class="action action--preview"
+      >
         <svg
           width="16"
           height="16"
@@ -88,10 +92,10 @@
           />
         </svg>
         <span>Preview</span>
-      </a>
-      <a
+      </NavLink>
+      <NavLink
         v-if="github"
-        href="https://github.com/mauriciabad"
+        link="https://github.com/mauriciabad"
         class="action action--github"
       >
         <svg
@@ -110,7 +114,7 @@
         </svg>
 
         <span>My profile</span>
-      </a>
+      </NavLink>
     </div>
   </div>
 </template>
