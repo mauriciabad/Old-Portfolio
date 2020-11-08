@@ -1,6 +1,26 @@
 {
   "projects": [
     {
+      "title": "Langton's Ant 3D",
+      "description": "Langton's Ant visualization in 3 dimensions where you can play around!",
+      "tags": [
+        "Three.js"
+      ],
+      "preview": "/assets/blog-img/langton-ant.png",
+      "source_code_url": "https://github.com/lacadev/Langton_Ant_3D",
+      "preview_url": "https://lacadev.github.io/Langton_Ant_3D/"
+    },
+    {
+      "title": "HackUPC landing",
+      "description": "The landing page for the biggest student hackathon in Spain. ",
+      "tags": [
+        "WebPack"
+      ],
+      "preview": "/assets/blog-img/hackupc-2019.png",
+      "source_code_url": "https://github.com/hackupc/hackupc-landing",
+      "preview_url": "https://hackupc.com/"
+    },
+    {
       "title": "Emoji dealer",
       "description": "Shuffle and deal cards with emojis. Ideal to play the warewolf.",
       "tags": [
@@ -9,16 +29,6 @@
       "preview": "/assets/blog-img/emoji-dealer.png",
       "source_code_url": "https://github.com/mauriciabad/Emoji-Daler",
       "preview_url": "https://emojidealer.netlify.app/"
-    },
-    {
-      "title": "Thumbnail generator",
-      "description": "Youtube thumbnails generator for the channel “Bitcoin al dia”.",
-      "tags": [
-
-      ],
-      "preview": "/assets/blog-img/miniatura-bitcoinaldia.png",
-      "source_code_url": "https://github.com/mauriciabad/BitcoinAlDia-Thumbnail-Generator",
-      "preview_url": "https://miniatura-bitcoinaldia.netlify.app/"
     },
     {
       "title": "Automata app",
@@ -31,6 +41,16 @@
       "preview_url": "https://automata-app.netlify.app/"
     },
     {
+      "title": "Thumbnail generator",
+      "description": "Youtube thumbnails generator for the channel “Bitcoin al dia”.",
+      "tags": [
+
+      ],
+      "preview": "/assets/blog-img/miniatura-bitcoinaldia.png",
+      "source_code_url": "https://github.com/mauriciabad/BitcoinAlDia-Thumbnail-Generator",
+      "preview_url": "https://miniatura-bitcoinaldia.netlify.app/"
+    },
+    {
       "title": "Advent of Corona",
       "description": "14 coding challenges for developers during the coronavirus confinement.",
       "tags": [
@@ -39,16 +59,6 @@
       "preview": "/assets/blog-img/advent-of-corona.png",
       "source_code_url": "https://github.com/hackupc/adventofcorona-web",
       "preview_url": "https://adventofcorona.hackersatupc.org/"
-    },
-    {
-      "title": "HackUPC landing",
-      "description": "The landing page for the biggest student hackathon in Spain. ",
-      "tags": [
-        "WebPack"
-      ],
-      "preview": "/assets/blog-img/hackupc-2019.png",
-      "source_code_url": "https://github.com/hackupc/hackupc-landing",
-      "preview_url": "https://hackupc.com/"
     },
     {
       "title": "GradeCalc",
