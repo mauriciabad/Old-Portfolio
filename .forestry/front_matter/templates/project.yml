@@ -29,4 +29,4 @@ fields:
     required: false
   label: Preview URL
 pages:
-- docs/_projects/hackupc-landing.md
+- docs/_projects/gradecalc.json

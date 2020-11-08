@@ -16,7 +16,7 @@ sections:
   label: Projects
   create: documents
   match: "*.json"
-  new_doc_ext: ".json"
+  new_doc_ext: json
   templates:
   - project
 upload_dir: docs/.vuepress/public/assets/blog-img
