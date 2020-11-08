@@ -28,5 +28,3 @@ fields:
   config:
     required: false
   label: Preview URL
-pages:
-- docs/_projects/gradecalc.json
