@@ -2,19 +2,24 @@
 label: Landing
 hide_body: true
 fields:
-  - name: projects
-    type: field_group_list
-    fields:
-      - name: project
-        type: include
-        config: {}
-        template: project
-        label: Project
-        display_field: title
+- name: projects
+  type: field_group_list
+  fields:
+  - name: project
+    type: include
+    config: {}
+    template: project
+    label: Project
+    display_field: title
+  - name: title
+    type: text
     config:
-      min:
-      max:
-      labelField:
-    label: Projects
+      required: true
+    label: Title
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Projects
 pages:
-  - docs/landing.json
+- docs/landing.json
