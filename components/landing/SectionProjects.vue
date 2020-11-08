@@ -28,6 +28,11 @@
     <Title>Projects</Title>
     <div class="project-list">
       <ProjectEntry
+        github="true"
+        title="Full list in GitHub"
+        description="This are highlated projects, you’ll find the full list in my GitHub profile."
+      />
+      <ProjectEntry
         v-for="project in projects"
         :key="project.title"
         v-bind="project"
