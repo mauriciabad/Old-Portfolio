@@ -2,39 +2,39 @@
 label: Landing
 hide_body: true
 fields:
-  - name: projects
-    type: field_group_list
-    display_field: title
-    fields:
-      - type: text
-        name: title
-        label: title
-      - type: text
-        name: description
-        label: description
-      - name: tags
-        type: tag_list
-        default: []
-        label: tags
-      - name: preview
-        type: file
-        config:
-          maxSize: 10
-        label: preview
-      - name: source_code_url
-        type: text
-        config:
-          required: false
-        label: Source code URL
-      - name: preview_url
-        type: text
-        config:
-          required: false
-        label: Preview URL
+- name: projects
+  type: field_group_list
+  display_field: title
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+  - name: tags
+    type: tag_list
+    default: []
+    label: tags
+  - name: preview
+    type: file
     config:
-      min:
-      max:
-      labelField:
-    label: Projects
+      maxSize: 10
+    label: preview
+  - name: source_code_url
+    type: text
+    config:
+      required: false
+    label: Source code URL
+  - name: preview_url
+    type: text
+    config:
+      required: false
+    label: Preview URL
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Projects
 pages:
-  - docs/landing.json
+- docs/landing.json

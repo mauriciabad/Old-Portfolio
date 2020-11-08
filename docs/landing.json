@@ -1,6 +1,16 @@
 {
   "projects": [
     {
+      "title": "Automata app",
+      "description": "Tool for state machines to visualize, check accepted strings, converto to DFA...",
+      "tags": [
+
+      ],
+      "preview": "/assets/blog-img/automata.png",
+      "source_code_url": "https://github.com/mauriciabad/Automata-App",
+      "preview_url": "https://automata-app.netlify.app/"
+    },
+    {
       "title": "Advent of Corona",
       "description": "14 coding challenges for developers during the coronavirus confinement.",
       "tags": [
