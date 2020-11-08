@@ -1,16 +1,6 @@
 {
   "projects": [
     {
-      "title": "Langton's Ant 3D",
-      "description": "Langton's Ant visualization in 3 dimensions where you can play around!",
-      "tags": [
-        "Three.js"
-      ],
-      "preview": "/assets/blog-img/langton-ant.png",
-      "source_code_url": "https://github.com/lacadev/Langton_Ant_3D",
-      "preview_url": "https://lacadev.github.io/Langton_Ant_3D/"
-    },
-    {
       "title": "HackUPC landing",
       "description": "The landing page for the biggest student hackathon in Spain. ",
       "tags": [
@@ -39,6 +29,16 @@
       "preview": "/assets/blog-img/automata.png",
       "source_code_url": "https://github.com/mauriciabad/Automata-App",
       "preview_url": "https://automata-app.netlify.app/"
+    },
+    {
+      "title": "Langton's Ant 3D",
+      "description": "Langton's Ant visualization in 3 dimensions where you can play around!",
+      "tags": [
+        "Three.js"
+      ],
+      "preview": "/assets/blog-img/langton-ant.png",
+      "source_code_url": "https://github.com/lacadev/Langton_Ant_3D",
+      "preview_url": "https://lacadev.github.io/Langton_Ant_3D/"
     },
     {
       "title": "Thumbnail generator",
