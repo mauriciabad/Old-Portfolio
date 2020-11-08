@@ -28,64 +28,9 @@
     <Title>Projects</Title>
     <div class="project-list">
       <ProjectEntry
-        :title="'HackUPC Landing'"
-        :description="
-          'The landing page for the biggest student hackathon in Spain. '
-        "
-        :tags="['js', 'landing', 'react.js']"
-        :preview="'/assets/blog-img/hackupc-2019.png'"
-        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
-        :preview_url="'https://hackupc.com/'"
-      />
-      <ProjectEntry
-        :title="'HackUPC Landing'"
-        :description="
-          'The landing page for the biggest student hackathon in Spain. Longer description than the rest. '
-        "
-        :tags="['js', 'landing', 'react.js']"
-        :preview="'/assets/blog-img/hackupc-2019.png'"
-        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
-        :preview_url="'https://hackupc.com/'"
-      />
-      <ProjectEntry
-        :title="'HackUPC Landing'"
-        :description="
-          'The landing page for the biggest student hackathon in Spain. '
-        "
-        :tags="['js', 'landing', 'react.js']"
-        :preview="'/assets/blog-img/hackupc-2019.png'"
-        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
-        :preview_url="'https://hackupc.com/'"
-      />
-      <ProjectEntry
-        :title="'HackUPC Landing'"
-        :description="
-          'The landing page for the biggest student hackathon in Spain. '
-        "
-        :tags="['js', 'landing', 'react.js']"
-        :preview="'/assets/blog-img/hackupc-2019.png'"
-        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
-        :preview_url="'https://hackupc.com/'"
-      />
-      <ProjectEntry
-        :title="'HackUPC Landing'"
-        :description="
-          'The landing page for the biggest student hackathon in Spain. '
-        "
-        :tags="['js', 'landing', 'react.js']"
-        :preview="'/assets/blog-img/hackupc-2019.png'"
-        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
-        :preview_url="'https://hackupc.com/'"
-      />
-      <ProjectEntry
-        :title="'HackUPC Landing'"
-        :description="
-          'The landing page for the biggest student hackathon in Spain. '
-        "
-        :tags="['js', 'landing', 'react.js']"
-        :preview="'/assets/blog-img/hackupc-2019.png'"
-        :source_code_url="'https://github.com/hackupc/hackupc-landing'"
-        :preview_url="'https://hackupc.com/'"
+        v-for="project in projects"
+        :key="project.title"
+        v-bind="project"
       />
     </div>
   </section>
@@ -97,6 +42,9 @@ import ProjectEntry from '@theme/components/landing/ProjectEntry.vue'
 
 export default {
   components: { Title, ProjectEntry },
+  props: {
+    projects: Array,
+  },
 }
 </script>
 

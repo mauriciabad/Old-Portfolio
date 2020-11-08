@@ -50,7 +50,7 @@ export default {
   props: {
     title: String,
     description: String,
-    // tags: Array,
+    tags: Array,
     preview: String,
     source_code_url: String,
     preview_url: String,

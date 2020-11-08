@@ -5,7 +5,7 @@ admin_path: ''
 webhook_url:
 sections:
   - type: document
-    path: docs/projects.json
+    path: docs/landing.json
     label: Projects
   - type: directory
     path: docs/_posts
