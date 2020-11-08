@@ -1,16 +1,6 @@
 {
   "projects": [
     {
-      "title": "HackUPC landing",
-      "description": "The landing page for the biggest student hackathon in Spain. ",
-      "tags": [
-        "WebPack"
-      ],
-      "preview": "/assets/blog-img/hackupc-2019.png",
-      "source_code_url": "https://github.com/hackupc/hackupc-landing",
-      "preview_url": "https://hackupc.com/"
-    },
-    {
       "title": "Advent of Corona",
       "description": "14 coding challenges for developers during the coronavirus confinement.",
       "tags": [
@@ -19,6 +9,16 @@
       "preview": "/assets/blog-img/advent-of-corona.png",
       "source_code_url": "https://github.com/hackupc/adventofcorona-web",
       "preview_url": "https://adventofcorona.hackersatupc.org/"
+    },
+    {
+      "title": "HackUPC landing",
+      "description": "The landing page for the biggest student hackathon in Spain. ",
+      "tags": [
+        "WebPack"
+      ],
+      "preview": "/assets/blog-img/hackupc-2019.png",
+      "source_code_url": "https://github.com/hackupc/hackupc-landing",
+      "preview_url": "https://hackupc.com/"
     },
     {
       "title": "GradeCalc",
