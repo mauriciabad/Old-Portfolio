@@ -28,16 +28,21 @@
     <Title>Projects</Title>
     <div class="project-list">
       <ProjectEntry
-        github="true"
+        v-if="currentPage === 0"
+        :github="true"
         title="Full list in GitHub"
         description="This are highlated projects, you’ll find the full list in my GitHub profile."
       />
       <ProjectEntry
-        v-for="project in projects"
+        v-for="project in projectsInCurrentPage"
         :key="project.title"
         v-bind="project"
       />
     </div>
+    <button :disabled="currentPage === 0" @click="prevPage">prev</button>
+    <button :disabled="currentPage === totalPages - 1" @click="nextPage">
+      next
+    </button>
   </section>
 </template>
 
@@ -49,6 +54,38 @@ export default {
   components: { Title, ProjectEntry },
   props: {
     projects: Array,
+  },
+  data: function() {
+    return {
+      currentPage: 0,
+      pageSize: 6,
+    }
+  },
+  computed: {
+    totalPages: function() {
+      return Math.ceil((this.projects.length + 1) / this.pageSize)
+    },
+    projectsInCurrentPage: function() {
+      return this.projects.filter(
+        (project, i) =>
+          i + 1 >= this.currentPage * this.pageSize &&
+          i + 1 < (this.currentPage + 1) * this.pageSize
+      )
+    },
+  },
+  methods: {
+    nextPage: function() {
+      this.goToPage(this.currentPage + 1)
+    },
+    prevPage: function() {
+      this.goToPage(this.currentPage - 1)
+    },
+    goToPage: function(page) {
+      this.currentPage = Math.min(
+        Math.max(Math.floor(page), 0),
+        this.totalPages - 1
+      )
+    },
   },
 }
 </script>
