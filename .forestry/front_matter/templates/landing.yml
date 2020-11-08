@@ -11,11 +11,6 @@ fields:
     template: project
     label: Project
     display_field: title
-  - name: title
-    type: text
-    config:
-      required: true
-    label: Title
   config:
     min: 
     max: 
