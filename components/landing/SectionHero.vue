@@ -1,5 +1,5 @@
 <template>
-  <main class="hero">
+  <main id="about" class="hero">
     <div class="info">
       <h1 class="title">Web developer<br />& UI/UX Designer</h1>
       <p class="desc">

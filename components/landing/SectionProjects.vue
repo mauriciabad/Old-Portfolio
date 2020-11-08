@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="projects">
     <div class="bg" aria-hidden="true">
       <div class="bg-gradient"></div>
       <div class="bg-divider bg-divider--top">
