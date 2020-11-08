@@ -1,6 +1,16 @@
 {
   "projects": [
     {
+      "title": "Emoji dealer",
+      "description": "Shuffle and deal cards with emojis. Ideal to play the warewolf.",
+      "tags": [
+        "React.js"
+      ],
+      "preview": "/assets/blog-img/emoji-dealer.png",
+      "source_code_url": "https://github.com/mauriciabad/Emoji-Daler",
+      "preview_url": "https://emojidealer.netlify.app/"
+    },
+    {
       "title": "Thumbnail generator",
       "description": "Youtube thumbnails generator for the channel “Bitcoin al dia”.",
       "tags": [
