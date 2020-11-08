@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url:
+webhook_url: 
 sections:
 - type: directory
   path: docs/_posts
@@ -15,7 +15,8 @@ sections:
   path: docs/_projects
   label: Projects
   create: documents
-  match: "*.md"
+  match: "*.json"
+  new_doc_ext: ".json"
   templates:
   - project
 upload_dir: docs/.vuepress/public/assets/blog-img
