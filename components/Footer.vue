@@ -21,6 +21,7 @@
   height 1em
   vertical-align -0.15em
   transition transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29)
+  cursor text
 
 .footer
   line-height 1
