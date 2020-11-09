@@ -1,7 +1,7 @@
 const removeMd = require('remove-markdown')
 
 module.exports = {
-  title: 'Maurici Abad Gutierrez | Web developer & Student | Portfolio',
+  title: 'Maurici Abad Gutierrez | Web developer & UI/UX designer',
   description:
     'Personal website of Maurici Abad Gutierrez, a Software Engineer in Barcelona. It contains information about him, projects and blog posts.',
   lang: 'en-GB',
@@ -67,9 +67,12 @@ module.exports = {
       {
         directories: [
           {
-            id: 'post',
+            id: 'portfolio',
             dirname: '_posts',
             path: '/',
+            pagination: {
+              lengthPerPage: 6,
+            },
           },
         ],
         frontmatters: [],
@@ -122,7 +125,7 @@ module.exports = {
     nav: [
       { text: 'About', link: '/#about' },
       { text: 'Projects', link: '/#projects' },
-      { text: 'Blog', link: '/blog/' },
+      { text: 'Blog', link: '/#blog' },
     ],
   },
 }

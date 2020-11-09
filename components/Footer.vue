@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <span class="text">
+    <p class="text" aria-hidden="true">
       <strong>Made</strong>
       with
       <svg class="heart" viewBox="0 0 391.837 391.837">
@@ -11,8 +11,8 @@
         />
       </svg>
       by
-      <strong>Maurici Abad</strong>
-    </span>
+      <strong>Maurici</strong>
+    </p>
   </footer>
 </template>
 
@@ -23,10 +23,14 @@
   transition transform 0.5s cubic-bezier(0.35, 3.46, 0.36, -0.29)
 
 .footer
-  padding 0 1rem 1rem
   line-height 1
   text-align center
+  padding 0 1rem 1rem
+  margin 0
 
-.text:hover .heart
+.text
+  margin 0
+
+.footer:hover .heart
   transform scale(1.333)
 </style>

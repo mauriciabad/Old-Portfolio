@@ -1,13 +1,14 @@
 <template>
-  <section id="blog" class="section">
+  <section class="section">
     <Title>Blog</Title>
 
+    <Pagination class="pagination--top" />
     <div itemscope itemtype="http://schema.org/Blog">
       <template v-for="page in $pagination.pages">
         <PostPreview v-if="page" :key="page.key" :page="page" />
       </template>
     </div>
-    <Pagination class="pagination" />
+    <Pagination class="pagination--bottom" />
   </section>
 </template>
 
@@ -22,12 +23,6 @@ export default {
     Title,
     Pagination,
   },
-
-  computed: {
-    pages() {
-      return this.$pagination.pages
-    },
-  },
 }
 </script>
 
@@ -35,5 +30,8 @@ export default {
 .section
   text-align center
 .pagination
-  margin 1rem 0 4rem
+  &--top
+    margin 2rem 0 0.5rem
+  &--bottom
+    margin 1rem 0 4rem
 </style>

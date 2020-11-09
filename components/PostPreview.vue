@@ -78,6 +78,7 @@ export default {
   max-width 52rem
 
 .entry
+  text-align left
   background-color #fff
   margin 2rem 0
   padding 1.5rem
