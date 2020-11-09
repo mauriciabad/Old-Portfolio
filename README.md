@@ -6,14 +6,14 @@ Use it here: https://mauriciabad.com/
 
 Author: [Maurici Abad](https://mauriciabad.com/)
 
-## Build
+## Develop
 
 ```bash
-npm install
-npm start
+yarn
+yarn start
 ```
 
-Once the page is built, your default browser will open on https://localhost:8080/
+Once the page is built, your default browser will open on http://localhost:8081/
 
 ## Deploy
 

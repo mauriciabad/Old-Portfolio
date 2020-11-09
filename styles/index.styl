@@ -1,0 +1,195 @@
+@require './config.styl'
+@require './code.styl'
+@require './sw-popup.styl'
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,600,700&display=swap")
+
+$green = #03a87c
+$color_1 = rgba(0, 0, 0, 0.54)
+$color_2 = rgba(0, 0, 0, 0.44)
+$color_3 = rgba(0, 0, 0, 0.8)
+$primary_font_family = 'Poppins'
+$second_font_family = $primary_font_family
+
+// custom //
+
+body
+  margin 0
+  overflow-x hidden
+  background-color $bgColor
+
+.max-width-layout
+  max-width $contentWidth
+  margin-left auto
+  margin-right auto
+  padding-left 2rem
+  padding-right 2rem
+  @media (max-width: $MQMobile)
+    padding-left 1rem
+    padding-right 1rem
+
+// custom //
+
+body
+  font-family: $primary_font_family
+  color: $color_3
+.wrapmain
+  min-height:600px
+.font-secondary
+   font-family: $second_font_family
+img
+  max-width: 100%
+a
+  color: $green
+.article-info
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-basis: auto
+.article-info-left
+  display: flex
+.profile-avatar
+  display: block
+  padding-right: 10px
+.avatar-image
+  width: 40px
+  height: 40px
+  display: inline-block
+  vertical-align: middle
+  border-radius: 100%
+.username
+  color: $color_3
+  font-size: 13px
+.date
+  color: $color_2
+  font-size: 13px
+.read-time
+  color: $color_2
+  font-size: 13px
+.card-panel
+  display: inline-block
+  margin: 30px 0 40px 0
+  width: 100%
+.card-panel-header
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+  margin-bottom: 25px
+.card-panel-heading
+  color: $color_3
+  display: inline-block
+  font-size: 20px
+  line-height: 1.2
+  letter-spacing: 0
+  font-weight: 700
+  font-style: normal
+  padding-bottom: 20px
+  border-bottom: 1px solid rgba(0, 0, 0, 0.44) !important
+.card-container
+  margin-bottom: 30px
+.card-inside
+  margin-bottom: 10px
+.card-container.intro
+  -ms-flex: 0 0 100%
+  flex: 0 0 100%
+  max-width: 100%
+  .card
+    display: flex
+    flex-direction: row
+    -ms-flex-direction: row
+    padding: 0
+  .card-header-image
+    width: 50%
+    margin: 0px
+    img
+      height: 100%
+      min-height: 300px
+  .card-subheading
+    padding-top: 0
+  .card-inside
+    width: 50%
+    padding: 30px 30px 30px 40px
+    .heading
+      font-size: 30px
+    p
+      font-size: 22px
+      margin-bottom: 50px
+      color: $color_1
+  .meta-bottom
+    position: absolute
+    bottom: 30px
+    right: 30px
+    left: calc(50% + 40px)
+.card
+  padding: 20px
+  border-radius: 0
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  -ms-border-radius: 0
+  -o-border-radius: 0
+.card-header-image
+  display: block
+  margin: -20px -20px 0 -20px
+  img
+    object-fit: cover
+    object-position: top
+    height: 180px
+    width: 100%
+    cursor: pointer
+.card-subheading span
+  color: $color_2
+  font-size: 13px
+  padding-top: 15px
+  padding-bottom: 5px
+  display: inline-block
+
+  &:after
+    content:','
+    margin-right:3px
+  &:last-child:after
+    content: ''
+.heading
+  font-size: 22px
+  font-weight: 700
+  line-height: 1.26
+  cursor: pointer
+  transition: all .2s
+  color:inherit
+  &:hover
+    color: $green
+    text-decoration:none
+.article-head, .content__default
+  font-family: 'Poppins'
+  line-height:1.3
+.card-subheading.post-meta-tags span
+  font-size: 16px
+  background: #eee
+  padding:5px 10px
+  margin-right:10px
+  color:#333
+  &:after
+    content:''
+.content__default
+  font-size:18px
+  line-height:1.9
+  p, pre, iframe, img, div[class*="language-"] pre, div[class*="language-"] pre[class*="language-"]
+    margin-top:1.2em
+    margin-bottom:1.2em
+  p:first-of-type
+    margin-top:0
+  h1
+    font-weight:700
+  h1, h2, h3, h4, h5, h6
+    font-weight:600
+    font-family:$primary_font_family
+    margin-top:1.5em
+    margin-bottom:.5em
+.featuredimg
+  border-radius:0px
+.mt-40
+  margin-top:40px;
+.mb-40
+  margin-bottom:40px
+.lead
+  color: $color_1
+code
+  font-size: .85em
+  border-radius: 3px
